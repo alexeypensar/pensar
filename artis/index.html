@@ -63,10 +63,6 @@
                         if ((city.charAt(0).toUpperCase() + city.substr(1).toLowerCase()) === (el.targetCity.charAt(0).toUpperCase() + el.targetCity.substr(1).toLowerCase())) {
 
 
-
-
-
-
                             if (+volume * 167 > weight) {
                                 weight = volume * 167;
                             }
@@ -167,6 +163,7 @@
                     });
                     let desperation = document.getElementById('desperation');
                     let desperationText = document.createElement('p');
+                    desperationText.style.margin = '0';
                     desperation.appendChild(desperationText);
                     desperationText.textContent = 'Новосибирск >> ' + city.charAt(0).toUpperCase() + city.substr(1).toLowerCase();
 
