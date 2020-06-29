@@ -165,7 +165,13 @@
                     let desperationText = document.createElement('p');
                     desperationText.style.margin = '0';
                     desperation.appendChild(desperationText);
-                    desperationText.textContent = 'Новосибирск >> ' + city.charAt(0).toUpperCase() + city.substr(1).toLowerCase();
+
+                    let arrow = document.createElement('img');
+                    arrow.setAttribute('src', 'img/arrow.svg');
+
+                    // desperationText.textContent = 'Новосибирск ' + desperation.appendChild(arrow) + city.charAt(0).toUpperCase() + city.substr(1).toLowerCase();
+                    desperationText.innerHTML = 'Новосибирск  ' + '<img src="img/arrow.svg" alt="">  ' + city.charAt(0).toUpperCase() + city.substr(1).toLowerCase();
+
 
                 }
 
