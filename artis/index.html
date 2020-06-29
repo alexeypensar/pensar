@@ -58,6 +58,11 @@
                     filteredArray.forEach((el) => {
                         if ((city.charAt(0).toUpperCase() + city.substr(1).toLowerCase()) === (el.targetCity.charAt(0).toUpperCase() + el.targetCity.substr(1).toLowerCase())) {
 
+
+
+
+
+
                             if (+volume * 167 > weight) {
                                 weight = volume * 167;
                             }
@@ -73,11 +78,12 @@
                                 this.terminalPrice = this.minTerminal;
                             }
 
+
+
                             this.waybillPrice = el.waybill;
                             this.showDispatcher = el.dispatcher;
                             this.result = +this.airPrice + +this.terminalPrice + +this.waybillPrice;
                             el.transferCity !== '' ? this.transferCity = el.transferCity : this.transferCity = '';
-
 
                             let resultsBlock = document.getElementsByClassName('results')[0];
 
@@ -101,17 +107,23 @@
                             wrapper.appendChild(sixth);
                             wrapper.appendChild(seventh);
 
+
+
                             if (this.showDispatcher === 'Аэрофлот') {
                                 first.style.color = 'blue';
+                                seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                             }
                             else if (this.showDispatcher === 'S7') {
                                 first.style.color = 'mediumseagreen';
+                                seventh.textContent = ('Итоговая стоимость: ' + (this.result.toFixed(2) - this.terminalPrice.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
                                 this.terminalPrice = 0;
+
                                 wrapper.removeChild(fifth);
                             }
 
                             else {
                                 first.style.color = 'cornflowerblue';
+                                seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                             }
 
 
@@ -120,10 +132,12 @@
                             if (this.transferCity !== '') {
                                 second.textContent = 'Трансфер: ' + this.transferCity;
                             }
-                            fourth.textContent = ('Стоимость перелёта: ' + this.airPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                            fourth.textContent = ('Стоимость перелёта: ' + this.airPrice.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                             fifth.textContent = ('Стоимость терминальной обработки: ' + this.terminalPrice.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                             sixth.textContent = ('Стоимость ГАН: ' + this.waybillPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-                            seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+
+
 
                         }
 
@@ -135,7 +149,6 @@
             }
 
 
-            // todo для инфо: он выводит стоимость только последнего перевозчика в массиве, если по этому направлению их несколько
         },
 
 
