@@ -48,7 +48,7 @@
 
 
                 let filteredArray = this.priceList.filter((el) => {
-                    return el.targetCity === city;
+                    return el.targetCity.charAt(0).toUpperCase() + el.targetCity.substr(1).toLowerCase() === city.charAt(0).toUpperCase() + city.substr(1).toLowerCase();
                 });
 
                 if (filteredArray.length === 0) {
@@ -56,7 +56,7 @@
                 } else {
 
                     filteredArray.forEach((el) => {
-                        if (city === el.targetCity) {
+                        if ((city.charAt(0).toUpperCase() + city.substr(1).toLowerCase()) === (el.targetCity.charAt(0).toUpperCase() + el.targetCity.substr(1).toLowerCase())) {
 
                             if (+volume * 167 > weight) {
                                 weight = volume * 167;
@@ -116,7 +116,7 @@
 
 
 
-                            first.textContent = 'Новосибирск >> ' + city + ', ' + this.showDispatcher;
+                            first.textContent = 'Новосибирск >> ' + city.charAt(0).toUpperCase() + city.substr(1).toLowerCase() + ', ' + this.showDispatcher;
                             if (this.transferCity !== '') {
                                 second.textContent = 'Трансфер: ' + this.transferCity;
                             }
