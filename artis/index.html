@@ -25,6 +25,10 @@
 
 </section>
 
+<div class="desperation" id="desperation">
+
+</div>
+
 <div class="results" id="results">
 
 
@@ -37,7 +41,7 @@
         el: '#calculator',
         methods: {
             calc: function () {
-
+                document.getElementById('desperation').innerHTML = '';
                 document.getElementById('results').innerHTML = '';
 
 
@@ -86,10 +90,9 @@
                             el.transferCity !== '' ? this.transferCity = el.transferCity : this.transferCity = '';
 
                             let resultsBlock = document.getElementsByClassName('results')[0];
-
-
                             let wrapper = document.createElement('article');
 
+                            let zeroth = document.createElement('img');
                             let first = document.createElement('p');
                             let second = document.createElement('p');
                             let fourth = document.createElement('p');
@@ -100,6 +103,10 @@
 
                             resultsBlock.appendChild(wrapper);
 
+
+
+
+                            wrapper.appendChild(zeroth);
                             wrapper.appendChild(first);
                             wrapper.appendChild(second);
                             wrapper.appendChild(fourth);
@@ -107,18 +114,33 @@
                             wrapper.appendChild(sixth);
                             wrapper.appendChild(seventh);
 
+                            // zeroth.style.zIndex = '-1';
+
 
 
                             if (this.showDispatcher === 'Аэрофлот') {
-                                first.style.color = 'blue';
+                                // first.style.color = 'blue';
                                 seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                                zeroth.setAttribute('src', 'img/aeroflot.png');
                             }
                             else if (this.showDispatcher === 'S7') {
-                                first.style.color = 'mediumseagreen';
-                                seventh.textContent = ('Итоговая стоимость: ' + (this.result.toFixed(2) - this.terminalPrice.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+                                // first.style.color = 'mediumseagreen';
+                                seventh.textContent = ('Итоговая стоимость: ' + (this.result - this.terminalPrice).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
                                 this.terminalPrice = 0;
-
                                 wrapper.removeChild(fifth);
+                                zeroth.setAttribute('src', 'img/s7.png');
+                                zeroth.setAttribute('style', 'max-width: 90px')
+                            }
+
+                            else if (this.showDispatcher === 'Уральские авиалинии') {
+                                zeroth.setAttribute('src', 'img/ural.png');
+                                seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                                // first.style.color = 'red';
+                            }
+
+                            else if (this.showDispatcher === 'NordStar') {
+                                zeroth.setAttribute('src', 'img/nordstar.png');
+                                seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                             }
 
                             else {
@@ -128,7 +150,7 @@
 
 
 
-                            first.textContent = 'Новосибирск >> ' + city.charAt(0).toUpperCase() + city.substr(1).toLowerCase() + ', ' + this.showDispatcher;
+
                             if (this.transferCity !== '') {
                                 second.textContent = 'Трансфер: ' + this.transferCity;
                             }
@@ -141,7 +163,12 @@
 
                         }
 
+
                     });
+                    let desperation = document.getElementById('desperation');
+                    let desperationText = document.createElement('p');
+                    desperation.appendChild(desperationText);
+                    desperationText.textContent = 'Новосибирск >> ' + city.charAt(0).toUpperCase() + city.substr(1).toLowerCase();
 
                 }
 
