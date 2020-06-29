@@ -118,6 +118,7 @@
                                 // first.style.color = 'blue';
                                 seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                                 zeroth.setAttribute('src', 'img/aeroflot.png');
+                                zeroth.style.maxWidth = '110px';
                             }
                             else if (this.showDispatcher === 'S7') {
                                 // first.style.color = 'mediumseagreen';
@@ -125,17 +126,19 @@
                                 this.terminalPrice = 0;
                                 wrapper.removeChild(fifth);
                                 zeroth.setAttribute('src', 'img/s7.png');
-                                zeroth.setAttribute('style', 'max-width: 90px')
+                                zeroth.setAttribute('style', 'max-width: 90px');
                             }
 
                             else if (this.showDispatcher === 'Уральские авиалинии') {
                                 zeroth.setAttribute('src', 'img/ural.png');
+                                zeroth.style.maxWidth = '110px';
                                 seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                                 // first.style.color = 'red';
                             }
 
                             else if (this.showDispatcher === 'NordStar') {
                                 zeroth.setAttribute('src', 'img/nordstar.png');
+                                zeroth.style.maxWidth = '110px';
                                 seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                             }
 
