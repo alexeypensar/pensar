@@ -1,0 +1,48 @@
+@import "reset.css";
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url("fonts/roboto-v20-latin_cyrillic-300.woff2") format('woff2'), url("fonts/roboto-v20-latin_cyrillic-300.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url("fonts/roboto-v20-latin_cyrillic-500.woff2") format('woff2'), url("fonts/roboto-v20-latin_cyrillic-500.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url("fonts/roboto-v20-latin_cyrillic-700.woff2") format('woff2'), url("fonts/roboto-v20-latin_cyrillic-700.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url("fonts/montserrat-v14-latin-600.woff2") format('woff2'), url("fonts/montserrat-v14-latin-600.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url("fonts/montserrat-v14-latin-700.woff2") format('woff2'), url("fonts/montserrat-v14-latin-700.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url("fonts/montserrat-v14-latin-800.woff2") format('woff2'), url("fonts/montserrat-v14-latin-800.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 1.5;
+  color: #3d3d3d;
+}
