@@ -79,116 +79,60 @@
     color: #3d3d3d;
   }
 }
-@-moz-keyframes leftDot {
+@-moz-keyframes arrow {
   0% {
-    top: 80%;
+    left: 0;
   }
-  25% {
-    top: 20%;
+  33% {
+    left: 10px;
   }
-  50% {
-    top: 80%;
+  66% {
+    left: -5px;
   }
   100% {
-    top: 80%;
+    left: 0;
   }
 }
-@-webkit-keyframes leftDot {
+@-webkit-keyframes arrow {
   0% {
-    top: 80%;
+    left: 0;
   }
-  25% {
-    top: 20%;
+  33% {
+    left: 10px;
   }
-  50% {
-    top: 80%;
+  66% {
+    left: -5px;
   }
   100% {
-    top: 80%;
+    left: 0;
   }
 }
-@-o-keyframes leftDot {
+@-o-keyframes arrow {
   0% {
-    top: 80%;
+    left: 0;
   }
-  25% {
-    top: 20%;
+  33% {
+    left: 10px;
   }
-  50% {
-    top: 80%;
+  66% {
+    left: -5px;
   }
   100% {
-    top: 80%;
+    left: 0;
   }
 }
-@keyframes leftDot {
+@keyframes arrow {
   0% {
-    top: 80%;
+    left: 0;
   }
-  25% {
-    top: 20%;
+  33% {
+    left: 10px;
   }
-  50% {
-    top: 80%;
+  66% {
+    left: -5px;
   }
   100% {
-    top: 80%;
-  }
-}
-@-moz-keyframes rightDot {
-  0% {
-    top: 20%;
-  }
-  25% {
-    top: 80%;
-  }
-  50% {
-    top: 20%;
-  }
-  100% {
-    top: 20%;
-  }
-}
-@-webkit-keyframes rightDot {
-  0% {
-    top: 20%;
-  }
-  25% {
-    top: 80%;
-  }
-  50% {
-    top: 20%;
-  }
-  100% {
-    top: 20%;
-  }
-}
-@-o-keyframes rightDot {
-  0% {
-    top: 20%;
-  }
-  25% {
-    top: 80%;
-  }
-  50% {
-    top: 20%;
-  }
-  100% {
-    top: 20%;
-  }
-}
-@keyframes rightDot {
-  0% {
-    top: 20%;
-  }
-  25% {
-    top: 80%;
-  }
-  50% {
-    top: 20%;
-  }
-  100% {
-    top: 20%;
+    left: 0;
   }
 }
 @media screen and (max-width: 1199.98px) {
@@ -241,6 +185,7 @@ body {
   font-size: 42px;
 }
 .header__logo_red {
+  font-size: 50px;
   animation: dot 3s ease-in-out infinite;
 }
 .header__links {
@@ -252,11 +197,17 @@ body {
   margin-right: 135px;
   height: 100%;
 }
-.header__links a {
+.header__link {
   font-weight: 500;
   font-size: 18px;
   color: #3d3d3d;
   text-decoration: none;
+}
+.header__link:hover,
+.header__link:focus {
+  background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .header__li_divider {
   width: 9px;
@@ -264,14 +215,38 @@ body {
   border-radius: 50%;
   background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
 }
+.header__links_submenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 40px;
+  flex-direction: column;
+  width: 250px;
+  height: 200px;
+  display: none;
+  padding: 20px 10px;
+  border: 2px solid #ff4b2b;
+  border-radius: 10px;
+}
+.header__links_submenu:hover {
+  display: flex;
+}
 .header__li:first-child {
   position: relative;
 }
-.header__li:first-child::after {
-  content: url("../img/icons/header-arrow-down.svg");
-  position: absolute;
-  right: -22px;
-  top: 1px;
+.header__li:first-child svg {
+  position: relative;
+  top: -1px;
+  margin-left: 7px;
+}
+.header__li:first-child .header__link:hover svg g path,
+.header__li:first-child .header__link:focus svg g path {
+  fill: #ff4b2b;
+  transition: 0s;
+}
+.header__li:first-child .header__link:hover + .header__links_submenu,
+.header__li:first-child .header__link:focus + .header__links_submenu {
+  display: flex;
 }
 .header__menu-button {
   border: none;
@@ -309,7 +284,6 @@ body {
   top: 80%;
   left: -19px;
   border: 10px solid #fff;
-  animation: 7s leftDot ease-in-out infinite;
 }
 .header__lines_right {
   content: '';
@@ -331,7 +305,6 @@ body {
   top: 20%;
   left: -19px;
   border: 10px solid #fff;
-  animation: 7s rightDot ease-in-out infinite;
 }
 .button {
   width: 244px;
@@ -341,7 +314,7 @@ body {
   align-items: center;
   font-weight: 500;
   font-size: 18px;
-  background-color: #fffffe;
+  background-color: transparent;
   border: 2px solid;
   border-image: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%) 2 2;
   cursor: pointer;
@@ -355,6 +328,12 @@ body {
   color: #fffffe;
   box-shadow: 0 20px 50px -15px #ff4b2b;
 }
+.button:hover svg,
+.button:focus svg {
+  position: relative;
+  left: 0;
+  animation: arrow 0.8s ease-in-out;
+}
 .button:hover svg linearGradient stop,
 .button:focus svg linearGradient stop {
   stop-color: #fffffe;
@@ -366,7 +345,7 @@ body {
   background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   line-height: 1;
   margin-top: 50px;
 }

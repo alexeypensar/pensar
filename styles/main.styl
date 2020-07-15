@@ -61,6 +61,7 @@ html, body {
 }
 
 .header__logo_red {
+	font-size: 50px;
 	animation: dot 3s ease-in-out infinite;
 }
 
@@ -71,14 +72,21 @@ html, body {
 	justify-content: space-between;
 	align-items: center;
 	margin-right: 135px;
-
 	height: 100%;
 
-	& a {
-		font-weight: 500;
-		font-size: 18px;
-		color: #3D3D3D;
-		text-decoration: none;
+
+}
+
+.header__link {
+	font-weight: 500;
+	font-size: 18px;
+	color: #3D3D3D;
+	text-decoration: none;
+
+	&:hover, &:focus {
+		background: $gradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 }
 
@@ -89,17 +97,51 @@ html, body {
 	background: $gradient;
 }
 
-.header__li:first-child {
-	position: relative;
 
-	&::after {
-		content: url('../img/icons/header-arrow-down.svg');
-		position: absolute;
-		right: -22px;
-		top: 1px;
-		//height: 7px;
+
+.header__links_submenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 40px;
+	flex-direction: column;
+	width: 250px;
+	height: 200px;
+	display: none;
+	padding: 20px 10px;
+	border: 2px solid $red;
+	border-radius: 10px;
+
+	&:hover {
+		display: flex;
 	}
 }
+
+.header__li:first-child {
+	position: relative;
+}
+
+.header__li:first-child svg {
+	position: relative;
+	top: -1px;
+	margin-left: 7px;
+}
+
+.header__li:first-child .header__link:hover svg g path,
+.header__li:first-child .header__link:focus svg g path {
+	fill: $red;
+	transition: 0s;
+
+}
+
+.header__li:first-child .header__link:hover + .header__links_submenu,
+.header__li:first-child .header__link:focus + .header__links_submenu {
+	display: flex;
+}
+
+
+
+
 
 .header__menu-button {
 	border: none;
@@ -145,7 +187,7 @@ html, body {
 		top: 80%;
 		left: -19px;
 		border: 10px solid #fff;
-		animation: 7s leftDot ease-in-out infinite;
+		//animation: 7s leftDot ease-in-out infinite;
 	}
 }
 .header__lines_right {
@@ -168,7 +210,7 @@ html, body {
 		top: 20%;
 		left: -19px;
 		border: 10px solid #fff;
-		animation: 7s rightDot ease-in-out infinite;
+		//animation: 7s rightDot ease-in-out infinite;
 
 
 	}
@@ -182,7 +224,7 @@ html, body {
 	align-items: center;
 	font-weight: 500;
 	font-size: 18px;
-	background-color: $white;
+	background-color: transparent;
 	border: 2px solid;
 	border-image: $gradient 2 2;
 	cursor: pointer;
@@ -195,6 +237,12 @@ html, body {
 		background: $gradient;
 		color: $white;
 		box-shadow: 0 20px 50px -15px $red;
+
+		& svg {
+			position: relative;
+			left: 0;
+			animation: arrow 0.8s ease-in-out;
+		}
 
 		& svg linearGradient stop {
 			stop-color: $white;
@@ -211,7 +259,7 @@ html, body {
 	background: $gradient;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 	line-height: 1;
 	margin-top: 50px;
 }
