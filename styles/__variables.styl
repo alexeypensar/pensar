@@ -3,3 +3,16 @@ $red = #FF4B2B;
 $white = #FFFFFE;
 $gradient = linear-gradient(to right, #FF416C 0%, #FF4B2B 100%);
 
+
+text-gradient = {
+	background: $gradient,
+	-webkit-background-clip: text,
+	-webkit-text-fill-color: transparent
+}
+
+border-gradient = {
+	background-color: transparent,
+	border: 2px solid,
+	border-image: $gradient 2 2
+}
+
