@@ -381,6 +381,7 @@ html, body {
 		height: 16px;
 		background: $gradient;
 		border-radius: 50%;
+		transition: all 0.8s ease-in-out;
 	}
 
 
@@ -443,6 +444,42 @@ html, body {
 		& .services__item::after {
 			right: 82%;
 			top: -8px;
+		}
+	}
+}
+
+.portfolio {
+	padding-top: 40px;
+	padding-bottom: 120px;
+}
+
+.portfolio__header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.portfolio__link {
+	font-weight: 500;
+	font-size: 18px;
+	color: #3D3D3D;
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+
+	& img {
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-left: 15px;
+	}
+
+	&:hover, &:focus {
+		{text-gradient}
+
+		& img {
+			animation: 0.8s arrow ease-in-out;
 		}
 	}
 }
