@@ -14,11 +14,14 @@
 
 
 <section class="calculator" id="calculator">
-    <div><label for="city">Куда летим:</label>
+    <div>
+        <label for="city">Куда летим:</label>
         <input id="city" type="text" v-model="city"></div>
-    <div><label for="weight">Вес:</label>
+    <div>
+        <label for="weight">Вес:</label>
         <input type="number" v-model="weight" id="weight"></div>
-    <div><label for="volume">Объём:</label>
+    <div>
+        <label for="volume">Объём:</label>
         <input type="number" v-model="volume" id="volume"></div>
     <button @click="calc()" id="go">Рассчитать</button>
 
@@ -30,6 +33,10 @@
 </div>
 
 <div class="results" id="results">
+
+<!--    <div class="results__airlines" id="resultsAirlines">-->
+
+<!--    </div>-->
 
 
 </div>
@@ -89,7 +96,7 @@
                             let wrapper = document.createElement('article');
 
                             let zeroth = document.createElement('img');
-                            let first = document.createElement('p');
+                            // let first = document.createElement('p');
                             let second = document.createElement('p');
                             let fourth = document.createElement('p');
                             let fifth = document.createElement('p');
@@ -97,14 +104,20 @@
                             let seventh = document.createElement('b');
 
 
+
+                            let resultsAirlines = document.createElement('section');
+                            resultsAirlines.classList.add('results__airlines');
+
+
                             resultsBlock.appendChild(wrapper);
 
+                            wrapper.appendChild(resultsAirlines);
+
+                            resultsAirlines.appendChild(zeroth);
+                            resultsAirlines.appendChild(second);
 
 
-
-                            wrapper.appendChild(zeroth);
-                            wrapper.appendChild(first);
-                            wrapper.appendChild(second);
+                            // wrapper.appendChild(first);
                             wrapper.appendChild(fourth);
                             wrapper.appendChild(fifth);
                             wrapper.appendChild(sixth);
@@ -116,13 +129,13 @@
 
                             if (this.showDispatcher === 'Аэрофлот') {
                                 // first.style.color = 'blue';
-                                seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                                seventh.textContent = ('Итого: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                                 zeroth.setAttribute('src', 'img/aeroflot.png');
                                 zeroth.style.maxWidth = '110px';
                             }
                             else if (this.showDispatcher === 'S7') {
                                 // first.style.color = 'mediumseagreen';
-                                seventh.textContent = ('Итоговая стоимость: ' + (this.result - this.terminalPrice).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+                                seventh.textContent = ('Итого: ' + (this.result - this.terminalPrice).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
                                 this.terminalPrice = 0;
                                 wrapper.removeChild(fifth);
                                 zeroth.setAttribute('src', 'img/s7.png');
@@ -132,19 +145,19 @@
                             else if (this.showDispatcher === 'Уральские авиалинии') {
                                 zeroth.setAttribute('src', 'img/ural.png');
                                 zeroth.style.maxWidth = '110px';
-                                seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                                seventh.textContent = ('Итого: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                                 // first.style.color = 'red';
                             }
 
                             else if (this.showDispatcher === 'NordStar') {
                                 zeroth.setAttribute('src', 'img/nordstar.png');
                                 zeroth.style.maxWidth = '110px';
-                                seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                                seventh.textContent = ('Итого: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                             }
 
                             else {
-                                first.style.color = 'cornflowerblue';
-                                seventh.textContent = ('Итоговая стоимость: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                                // first.style.color = 'cornflowerblue';
+                                seventh.textContent = ('Итого: ' + this.result.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                             }
 
 
@@ -154,8 +167,8 @@
                                 second.textContent = 'Трансфер: ' + this.transferCity;
                             }
                             fourth.textContent = ('Стоимость перелёта: ' + this.airPrice.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-                            fifth.textContent = ('Стоимость терминальной обработки: ' + this.terminalPrice.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-                            sixth.textContent = ('Стоимость ГАН: ' + this.waybillPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                            fifth.textContent = ('Терминальная обработка: ' + this.terminalPrice.toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                            sixth.textContent = ('Оформление ГАН: ' + this.waybillPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
 
 
@@ -164,6 +177,7 @@
 
 
                     });
+
                     let desperation = document.getElementById('desperation');
                     let desperationText = document.createElement('p');
                     desperationText.style.margin = '0';
