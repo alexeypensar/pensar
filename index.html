@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pensar - дизайн и разработка сайтов под ключ</title>
     <link rel="stylesheet" href="styles/main.css">
@@ -19,174 +20,237 @@
     <meta name="theme-color" content="#FF4B2B">
 
 </head>
+
 <body>
 
-<header class="header">
+    <header class="header">
 
-    <nav class="header__nav container">
-        <h2 class="header__logo">pensar<span class="header__logo_red">.</span></h2>
-        <ul class="header__links">
-            <li class="header__li">
-                <a class="header__link" href="" id="submenuButton">Цены и услуги
-                    <svg class="submenu__arrow" id="submenuArrow" width="14" height="7" viewBox="0 0 14 7" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0)">
-                            <path d="M0.00070102 1.16129C0.00019271 1.31069 0.033165 1.4583 0.0971938 1.59328C0.161223 1.72825 0.254682 1.84717 0.370702 1.94129L6.3707 6.77129C6.54963 6.91837 6.77408 6.99878 7.0057 6.99878C7.23733 6.99878 7.46177 6.91837 7.6407 6.77129L13.6407 1.77129C13.8449 1.60155 13.9733 1.35764 13.9977 1.09322C14.0221 0.828789 13.9404 0.565508 13.7707 0.361291C13.601 0.157075 13.3571 0.0286508 13.0926 0.00427102C12.8282 -0.0201087 12.5649 0.0615525 12.3607 0.231291L7.0007 4.70129L1.6407 0.381292C1.49392 0.259009 1.31518 0.181331 1.12563 0.157452C0.936078 0.133572 0.743653 0.164489 0.571126 0.246545C0.398599 0.328601 0.253187 0.458361 0.152097 0.620471C0.0510064 0.782582 -0.00153058 0.970258 0.00070102 1.16129Z"
-                                  fill="#3D3D3D"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0">
-                                <rect width="7" height="14" fill="white"
-                                      transform="matrix(1.19249e-08 -1 -1 -1.19249e-08 14 7)"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
+        <nav class="header__nav container">
+            <h2 class="header__logo">pensar<span class="header__logo_red">.</span></h2>
+            <ul class="header__links">
+                <li class="header__li">
+                    <a class="header__link" href="" id="submenuButton">Цены и услуги
+                        <svg class="submenu__arrow" id="submenuArrow" width="14" height="7" viewBox="0 0 14 7"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path
+                                    d="M0.00070102 1.16129C0.00019271 1.31069 0.033165 1.4583 0.0971938 1.59328C0.161223 1.72825 0.254682 1.84717 0.370702 1.94129L6.3707 6.77129C6.54963 6.91837 6.77408 6.99878 7.0057 6.99878C7.23733 6.99878 7.46177 6.91837 7.6407 6.77129L13.6407 1.77129C13.8449 1.60155 13.9733 1.35764 13.9977 1.09322C14.0221 0.828789 13.9404 0.565508 13.7707 0.361291C13.601 0.157075 13.3571 0.0286508 13.0926 0.00427102C12.8282 -0.0201087 12.5649 0.0615525 12.3607 0.231291L7.0007 4.70129L1.6407 0.381292C1.49392 0.259009 1.31518 0.181331 1.12563 0.157452C0.936078 0.133572 0.743653 0.164489 0.571126 0.246545C0.398599 0.328601 0.253187 0.458361 0.152097 0.620471C0.0510064 0.782582 -0.00153058 0.970258 0.00070102 1.16129Z"
+                                    fill="#3D3D3D" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="7" height="14" fill="white"
+                                        transform="matrix(1.19249e-08 -1 -1 -1.19249e-08 14 7)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <ul class="header__submenu" id="submenu">
+                        <li class="header__li_small"><a class="header__link_small" href="">Лендинг</a></li>
+                        <li class="header__li_small"><a class="header__link_small" href="">Многостраничный сайт</a></li>
+                        <li class="header__li_small"><a class="header__link_small" href="">Интернет-магазин</a></li>
+                    </ul>
+                </li>
+                <li class="header__li_divider"></li>
+                <li class="header__li"><a class="header__link" href="">Проекты</a></li>
+                <li class="header__li_divider"></li>
+                <li class="header__li"><a class="header__link" href="">Контакты</a></li>
+            </ul>
+
+            <button class="header__menu-button">
+                <img src="img/icons/header-burger.svg" alt="">
+            </button>
+
+        </nav>
+
+        <section class="header__content container">
+            <div class="header__lines">
+                <div class="header__lines_left"></div>
+                <div class="header__lines_right"></div>
+            </div>
+            <h1 class="header__heading_h1">pensar.</h1>
+            <h2 class="header__heading_h2">Создадим сайт для вашего бизнеса</h2>
+            <h3 class="header__heading_h3">Не тратьте время на поиск клиентов, пусть ваш сайт работает за вас</h3>
+
+            <button class="button">Обсудить проект
+                <svg width="32" height="16" viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11 8C11 9.10457 10.1046 10 9 10C7.89543 10 7 9.10457 7 8C7 6.89543 7.89543 6 9 6C10.1046 6 11 6.89543 11 8Z"
+                        fill="url(#paint0_linear)" />
+                    <path
+                        d="M31.7071 8.70711C32.0976 8.31658 32.0976 7.68342 31.7071 7.29289L25.3431 0.928933C24.9526 0.538409 24.3195 0.538409 23.9289 0.928933C23.5384 1.31946 23.5384 1.95262 23.9289 2.34315L29.5858 8L23.9289 13.6569C23.5384 14.0474 23.5384 14.6805 23.9289 15.0711C24.3195 15.4616 24.9526 15.4616 25.3431 15.0711L31.7071 8.70711ZM14 9L31 9V7L14 7V9ZM10 8C10 8.55228 9.55229 9 9 9V11C10.6569 11 12 9.65685 12 8H10ZM9 9C8.44771 9 8 8.55228 8 8H6C6 9.65685 7.34315 11 9 11V9ZM8 8C8 7.44772 8.44771 7 9 7V5C7.34315 5 6 6.34315 6 8H8ZM9 7C9.55229 7 10 7.44772 10 8H12C12 6.34315 10.6569 5 9 5V7ZM0 9H4V7H0V9Z"
+                        fill="url(#paint1_linear)" />
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF416C" />
+                            <stop offset="1" stop-color="#FF4B2B" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF416C" />
+                            <stop offset="1" stop-color="#FF4B2B" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+            </button>
+        </section>
+
+    </header>
+
+    <main>
+
+        <section class="services container">
+
+            <div class="section__headings">
+                <h2 class="section__heading_small">Услуги</h2>
+                <h3 class="section__heading">Чем мы можем<br>вам помочь<span class="section__heading_red">?</span></h3>
+            </div>
+
+            <div class="services__list">
+                <div class="services__item_shadow">
+                    <article class="services__item">
+                        <img src="img/icons/services-landing.svg" alt="">
+                        <h4>Лендинг</h4>
+                        <p>Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или
+                            услуги. Стоимость разработки такого сайта начинается от 18 500 рублей,
+                            срок от 7 дней.</p>
+
+                        <a href="">Подробнее
+                            <img src="img/icons/button-arrow.svg" alt="">
+                        </a>
+
+
+                    </article>
+                </div>
+
+                <div class="services__item_shadow">
+                    <article class="services__item">
+                        <img src="img/icons/services-multi.svg" alt="">
+                        <h4>Многостраничный сайт</h4>
+                        <p>Удобная навигация по нескольким страницам - удачное решение для корпоративных сайтов.
+                            Стоимость
+                            разработки многостраничного сайта начинается от 20 500 рублей,
+                            срок от 10 дней.</p>
+
+                        <a href="">Подробнее
+                            <img src="img/icons/button-arrow.svg" alt="">
+                        </a>
+
+
+                    </article>
+                </div>
+
+
+                <div class="services__item_shadow">
+                    <article class="services__item">
+                        <img src="img/icons/services-market.svg" alt="">
+                        <h4>Интернет-магазин</h4>
+                        <p>Идеальный инструмент продажи товаров онлайн. Стоимость разработки интернет-магазина
+                            начинается от
+                            40 500 рублей,
+                            срок от 14 дней.</p>
+
+                        <a href="">Подробнее
+                            <img src="img/icons/button-arrow.svg" alt="">
+                        </a>
+
+
+                    </article>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="portfolio container">
+            <div class="portfolio__header">
+
+
+                <div class="portfolio__headings">
+                    <h2 class="section__heading_small">портфолио</h2>
+                    <h3 class="section__heading">Наши последние работы<span class="section__heading_red">.</span></h3>
+
+                </div>
+
+                <a class="portfolio__link" href="">Подробнее
+                    <img src="img/icons/button-arrow.svg" alt="">
                 </a>
-                <ul class="header__submenu" id="submenu">
-                    <li class="header__li_small"><a class="header__link_small" href="">Лендинг</a></li>
-                    <li class="header__li_small"><a class="header__link_small" href="">Многостраничный сайт</a></li>
-                    <li class="header__li_small"><a class="header__link_small" href="">Интернет-магазин</a></li>
-                </ul>
-            </li>
-            <li class="header__li_divider"></li>
-            <li class="header__li"><a class="header__link" href="">Проекты</a></li>
-            <li class="header__li_divider"></li>
-            <li class="header__li"><a class="header__link" href="">Контакты</a></li>
-        </ul>
-
-        <button class="header__menu-button">
-            <img src="img/icons/header-burger.svg" alt="">
-        </button>
-
-    </nav>
-
-    <section class="header__content container">
-        <div class="header__lines">
-            <div class="header__lines_left"></div>
-            <div class="header__lines_right"></div>
-        </div>
-        <h1 class="header__heading_h1">pensar.</h1>
-        <h2 class="header__heading_h2">Создадим сайт для вашего бизнеса</h2>
-        <h3 class="header__heading_h3">Не тратьте время на поиск клиентов, пусть ваш сайт работает за вас</h3>
-
-        <button class="button">Обсудить проект
-            <svg width="32" height="16" viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 8C11 9.10457 10.1046 10 9 10C7.89543 10 7 9.10457 7 8C7 6.89543 7.89543 6 9 6C10.1046 6 11 6.89543 11 8Z"
-                      fill="url(#paint0_linear)"/>
-                <path d="M31.7071 8.70711C32.0976 8.31658 32.0976 7.68342 31.7071 7.29289L25.3431 0.928933C24.9526 0.538409 24.3195 0.538409 23.9289 0.928933C23.5384 1.31946 23.5384 1.95262 23.9289 2.34315L29.5858 8L23.9289 13.6569C23.5384 14.0474 23.5384 14.6805 23.9289 15.0711C24.3195 15.4616 24.9526 15.4616 25.3431 15.0711L31.7071 8.70711ZM14 9L31 9V7L14 7V9ZM10 8C10 8.55228 9.55229 9 9 9V11C10.6569 11 12 9.65685 12 8H10ZM9 9C8.44771 9 8 8.55228 8 8H6C6 9.65685 7.34315 11 9 11V9ZM8 8C8 7.44772 8.44771 7 9 7V5C7.34315 5 6 6.34315 6 8H8ZM9 7C9.55229 7 10 7.44772 10 8H12C12 6.34315 10.6569 5 9 5V7ZM0 9H4V7H0V9Z"
-                      fill="url(#paint1_linear)"/>
-                <defs>
-                    <linearGradient id="paint0_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#FF416C"/>
-                        <stop offset="1" stop-color="#FF4B2B"/>
-                    </linearGradient>
-                    <linearGradient id="paint1_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#FF416C"/>
-                        <stop offset="1" stop-color="#FF4B2B"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-
-        </button>
-    </section>
-
-</header>
-
-<main>
-
-    <section class="services container">
-
-        <div class="section__headings">
-            <h2 class="section__heading_small">Услуги</h2>
-            <h3 class="section__heading">Чем мы можем<br>вам помочь<span class="section__heading_red">?</span></h3>
-        </div>
-
-        <div class="services__list">
-            <div class="services__item_shadow">
-                <article class="services__item">
-                    <img src="img/icons/services-landing.svg" alt="">
-                    <h4>Лендинг</h4>
-                    <p>Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или
-                        услуги. Стоимость разработки такого сайта начинается от 18 500 рублей,
-                        срок от 7 дней.</p>
-
-                    <a href="">Подробнее
-                        <img src="img/icons/button-arrow.svg" alt="">
-                    </a>
-
-
-                </article>
-            </div>
-
-            <div class="services__item_shadow">
-                <article class="services__item">
-                    <img src="img/icons/services-multi.svg" alt="">
-                    <h4>Многостраничный сайт</h4>
-                    <p>Удобная навигация по нескольким страницам - удачное решение для корпоративных сайтов. Стоимость
-                        разработки многостраничного сайта начинается от 20 500 рублей,
-                        срок от 10 дней.</p>
-
-                    <a href="">Подробнее
-                        <img src="img/icons/button-arrow.svg" alt="">
-                    </a>
-
-
-                </article>
-            </div>
-
-
-            <div class="services__item_shadow">
-                <article class="services__item">
-                    <img src="img/icons/services-market.svg" alt="">
-                    <h4>Интернет-магазин</h4>
-                    <p>Идеальный инструмент продажи товаров онлайн. Стоимость разработки интернет-магазина начинается от
-                        40 500 рублей,
-                        срок от 14 дней.</p>
-
-                    <a href="">Подробнее
-                        <img src="img/icons/button-arrow.svg" alt="">
-                    </a>
-
-
-                </article>
-            </div>
-
-        </div>
-
-
-    </section>
-
-
-    <section class="portfolio container">
-        <div class="portfolio__header">
-
-
-            <div class="portfolio__headings">
-                <h2 class="section__heading_small">портфолио</h2>
-                <h3 class="section__heading">Наши последние работы<span class="section__heading_red">.</span></h3>
 
             </div>
 
-            <a class="portfolio__link" href="">Подробнее
-                <img src="img/icons/button-arrow.svg" alt="">
-            </a>
 
-        </div>
+        </section>
+
+        <section class="advantages">
+            <div class="advantages__wrapper container">
+
+                <img class="advantages__image" src="img/advantages.jpg" alt="супермен">
+
+                <div class="section__headings">
+                    <h2 class="section__heading_small">Преимущества</h2>
+                    <h3 class="section__heading">Почему мы лучше конкурентов<br>из соседней вкладки браузера<span
+                            class="section__heading_red">?</span></h3>
+                </div>
+
+                <div class="advantages__list">
+                    <article class="advantages__item">
+                        <img src="img/icons/advantages-1.svg" alt="">
+                        <h3 class="advantages__heading">Без шаблонов</h3>
+                        <p class="advantages__text">Мы не занимаемся шаблонным дизайном. Каждый проект разрабатывается с нуля под нужды вашего бизнеса.</p>
+                    </article>
+
+                    <article class="advantages__item">
+                        <img src="img/icons/advantages-2.svg" alt="">
+                        <h3 class="advantages__heading">Чётко в срок</h3>
+                        <p class="advantages__text">Дедлайн для нас -  священное понятие. 
+                            Мы не нарушаем озвученных сроков, потому что понимаем, что ни вы, ни ваши клиенты ждать не будут.</p>
+                    </article>
+
+                    <article class="advantages__item">
+                        <img src="img/icons/advantages-3.svg" alt="">
+                        <h3 class="advantages__heading">Вникаем в ваш бизнес</h3>
+                        <p class="advantages__text">Мы анализируем ваш бизнес и ваших конкурентов. Выделяем основные преимущества и выгоды для ваших будущих клиентов.</p>
+                    </article>
+
+                    <article class="advantages__item">
+                        <img src="img/icons/advantages-4.svg" alt="">
+                        <h3 class="advantages__heading">Адаптивный. Всегда</h3>
+                        <p class="advantages__text">В наше время адаптивность сайта - обязательное условие. Все наши сайты оптимизированы для мобильных, планшетов и компьютеров.</p>
+                    </article>
+
+                    <article class="advantages__item">
+                        <img src="img/icons/advantages-5.svg" alt="">
+                        <h3 class="advantages__heading">Никаких котов в мешке</h3>
+                        <p class="advantages__text">Поэтапная оплата - вы платите только 
+                            за те этапы работы над сайтом, которые уже завершены нами и согласованы 
+                            с вашей стороны.</p>
+                    </article>
+
+                    <article class="advantages__item">
+                        <img src="img/icons/advantages-6.svg" alt="">
+                        <h3 class="advantages__heading">Полный контроль</h3>
+                        <p class="advantages__text">При работе над каждым проектом мы создаём доску в trello и предоставляем вам к ней доступ, чтобы вы могли видеть нашу работу в режиме онлайн.</p>
+                    </article>
+                </div>
+
+            </div>
+
+        </section>
 
 
-    </section>
+    </main>
+
+    <footer>
+
+    </footer>
 
 
-</main>
-
-<footer>
-
-</footer>
-
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>

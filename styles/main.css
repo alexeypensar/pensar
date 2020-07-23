@@ -394,7 +394,8 @@ body {
 }
 .services {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 200px;
+  position: relative;
 }
 .section__headings {
   display: flex;
@@ -427,6 +428,13 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+}
+.services__list::before {
+  content: url("../img/services.jpg");
+  position: absolute;
+  left: -270px;
+  top: 70%;
 }
 .services__item {
   background-color: transparent;
@@ -545,6 +553,7 @@ body {
 .portfolio {
   padding-top: 40px;
   padding-bottom: 120px;
+  height: 800px;
 }
 .portfolio__header {
   display: flex;
@@ -575,4 +584,51 @@ body {
 .portfolio__link:hover img,
 .portfolio__link:focus img {
   animation: 0.8s arrow ease-in-out;
+}
+.advantages {
+  background-color: #3d3d3d;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.advantages .section__heading {
+  color: #fffffe;
+}
+.advantages__wrapper {
+  position: relative;
+}
+.advantages__image {
+  position: absolute;
+  top: -310px;
+  left: 0;
+}
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 120px;
+}
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 29%;
+  margin-bottom: 70px;
+}
+.advantages__heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #fffffe;
+}
+.advantages__text {
+  color: #fffffe;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  display: inline-block;
+  width: 80%;
 }
