@@ -19,3 +19,38 @@ submenuButton.addEventListener('click', function(el) {
 //     }
 // });
 
+let faqList = document.getElementsByClassName('faq__item');
+
+for(let i = 0; i < faqList.length; i++) {
+    let question = faqList[i].firstElementChild;
+    let answer = faqList[i].lastElementChild;
+    let block = faqList[i];
+    question.addEventListener('click', function(el) {
+        el.preventDefault();
+        block.classList.toggle('faq__item_opened')
+        answer.classList.toggle('faq__answer_opened');
+    })
+}
+
+
+
+
+
+
+// faqList.forEach(function(e) {
+
+
+
+//     this.question = e.firstElementChild;
+//     this.answer = e.lastElementChild;
+
+//     console.log(question);
+//     console.log(answer);
+
+//     question.addEventListener('click', function(el) {
+//         el.preventDefault();
+//         answer.classList.toggle('faq__answer_opened');
+
+//         console.log(answer);
+//     })
+// });
