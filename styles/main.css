@@ -638,3 +638,42 @@ body {
   display: inline-block;
   width: 80%;
 }
+.start-project {
+  height: 240px;
+  width: 100%;
+  background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.start-project__heading {
+  font-weight: 700;
+  font-size: 42px;
+  margin-right: 45px;
+  color: #fffffe;
+  line-height: 1;
+}
+.start-project__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+}
+.start-project__link img {
+  position: relative;
+  left: 0;
+}
+.start-project__link:hover img,
+.start-project__link:focus img {
+  animation: arrow 0.8s ease;
+}
+.yeah {
+  position: relative;
+}
+.yeah img {
+  position: absolute;
+  right: 0;
+  top: -140px;
+}
