@@ -588,7 +588,6 @@ body {
 .advantages {
   background-color: #3d3d3d;
   padding-top: 130px;
-  padding-bottom: 130px;
 }
 .advantages .section__heading {
   color: #fffffe;
@@ -596,7 +595,7 @@ body {
 .advantages__wrapper {
   position: relative;
 }
-.advantages__image {
+.advantages__image_superman {
   position: absolute;
   top: -310px;
   left: 0;
@@ -615,6 +614,13 @@ body {
   align-items: flex-start;
   width: 29%;
   margin-bottom: 70px;
+}
+.advantages__icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 43px;
 }
 .advantages__heading {
   font-weight: 700;
