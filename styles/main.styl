@@ -746,7 +746,6 @@ html, body {
 
 .contacts {
 	background-color: $black;
-	// height: 800px; // todo убрать потом
 	padding-top: 100px;
 	padding-bottom: 100px;
 	
@@ -836,14 +835,18 @@ html, body {
 	justify-content: space-between;
 	align-items: center;
 	margin-left: 95px;
-	margin-right: 95px;
+	// margin-right: 95px;
 	flex-wrap: wrap;
 
 	& a {
 		color: $white;
 		text-decoration none;
 		&:hover, &:focus {
-			{text-gradient};	
+			{text-gradient};
+			& .contacts__image {
+				background: $gradient;
+				// transition: all 0.4s ease;
+			}	
 		}	
 	}
 
@@ -851,8 +854,19 @@ html, body {
 
 .contacts__item {
 	display: flex;
-	max-width: 28%;	
+	// max-width: 28%;	
 	margin-bottom: 25px;
+	flex-basis: 33%;
+
+	& figcaption {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+	}
+}
+
+.contacts__item_small {
+	flex-basis: 25%;
 }
 
 .contacts__items figure {
@@ -861,12 +875,17 @@ html, body {
 	justify-content: flex-start;
 	align-items: center;
 
-	
+	& .contacts__phone {
+		font-weight: 700;
+		font-size: 30px;
+	}
 }
 
+
+
 .contacts__image {
-	width: 60px;
-	height: 60px;
+	min-width: 60px;
+	min-height: 60px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;	
@@ -874,4 +893,10 @@ html, body {
 	margin-right: 25px;
 	border: 2px solid $red;
 	border-radius: 50%;
+}
+
+
+
+.footer {
+	background-color: $white;
 }
