@@ -746,9 +746,10 @@ html, body {
 
 .contacts {
 	background-color: $black;
-	height: 800px; // todo убрать потом
-	padding-top: 140px;
+	// height: 800px; // todo убрать потом
+	padding-top: 100px;
 	padding-bottom: 100px;
+	
 
 	& .portfolio__headings {
 		text-align: left;	
@@ -758,6 +759,10 @@ html, body {
 		color: $white;
 		text-align: left;
 	}
+}
+
+.contacts__wrapper {
+	position: relative;
 }
 
 .contacts__form {
@@ -803,4 +808,70 @@ html, body {
 		fill: $white;
 	}
 
+}
+
+.contacts__label_checkbox {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+	color: $white;
+
+	& a {
+		color: $white;
+
+	}	
+}
+
+.contacts__image_woman {
+	position: absolute;
+	right: 0;
+	top: -220px;
+}
+
+.contacts__items {
+	color: $white;
+	margin-top: 95px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 95px;
+	margin-right: 95px;
+	flex-wrap: wrap;
+
+	& a {
+		color: $white;
+		text-decoration none;
+		&:hover, &:focus {
+			{text-gradient};	
+		}	
+	}
+
+}
+
+.contacts__item {
+	display: flex;
+	max-width: 28%;	
+	margin-bottom: 25px;
+}
+
+.contacts__items figure {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+
+	
+}
+
+.contacts__image {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;	
+	align-items: center;
+	margin-right: 25px;
+	border: 2px solid $red;
+	border-radius: 50%;
 }
