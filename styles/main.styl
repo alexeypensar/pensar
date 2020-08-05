@@ -469,7 +469,6 @@ html, body {
 .portfolio {
 	padding-top: 40px;
 	padding-bottom: 120px;
-	height: 800px; // todo убрать потом
 }
 
 .portfolio__header {
@@ -486,6 +485,7 @@ html, body {
 	text-decoration: none;
 	display: flex;
 	flex-direction: row;
+	align-self: flex-end;
 
 	& img {
 		position: relative;
@@ -502,6 +502,90 @@ html, body {
 		}
 	}
 }
+
+
+.portfolio__items {
+	margin-top: 80px;
+	margin-left: 95px;
+	margin-bottom: 160px;
+}
+
+.portfolio__item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+}
+
+.portfolio__description {
+	padding: 60px 85px 40px 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	{border-gradient};
+	// width: 45%;
+	// flex-grow: 0;
+	position: relative;
+	right: -2px;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		background: $gradient;
+		border-radius: 50%;
+		left: -9px;
+		top: 70px;	
+	}	
+
+	
+}
+
+.portfolio__heading {
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 1;
+}
+
+.portfolio__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.4;
+	margin-left: 60px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.portfolio__link_bottom {
+	align-self: flex-end;	
+}
+
+
+.portfolio__image {
+	z-index: 3;	
+	flex-shrink: 0;
+}
+
+
+.portfolio__buttons {
+	position: absolute;
+	bottom: -104px;
+	right: -74px;
+	z-index: 4;
+	display: flex;
+}
+
+.portfolio__button {
+	width: 74px;
+	height: 74px;
+
+	&:hover, &:focus {
+		cursor: pointer;
+		
+	}
+}
+
 
 .advantages {
 	background-color: $black;
@@ -965,3 +1049,12 @@ html, body {
 		text-decoration: underline;
 	}
 }
+
+// .image_animated {
+// 	// animation-name: images;
+// 	animation: images 5s ease-in-out infinite;	
+// }
+
+// todo убрать эту анимацию, если не будем пользоваться
+
+
