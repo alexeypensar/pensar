@@ -532,7 +532,7 @@ html, body {
 	// flex-grow: 0;
 	position: relative;
 	right: -2px;
-	border-right: none;
+	// border: 2px 0 2px 2px solid !important;
 	&::before {
 		content: '';
 		position: absolute;
@@ -582,9 +582,9 @@ html, body {
 	
 }
 
-.portfolio_animated {
-	animation: portfolio 1.5s ease-out;
-}
+// .portfolio_animated {
+// 	animation: portfolio 1.5s ease-out;
+// }
 
 
 .portfolio__buttons {
@@ -752,7 +752,7 @@ html, body {
 
 
 .howto {
-	height: 500px; // todo убрать потом
+	// height: 500px; // todo убрать потом
 	// position: relative;
 	padding-top: 300px;
 	padding-bottom: 220px;
@@ -762,6 +762,72 @@ html, body {
 .howto .section__heading {
 	text-align: left;
 }
+
+
+.howto__item {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 80px;
+	margin-left: 350px;
+	// margin-right: 115px;
+	position: relative;
+	width: 844px;
+	// width: 60%;
+
+	& .portfolio__buttons {
+		bottom: 40px;
+		right: -73px;	
+	}
+	
+		
+}
+
+.howto__image {
+	position: absolute;
+	left: -260px;	
+}
+
+.howto__description {
+	width: 100%;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	{border-gradient};
+	padding: 70px 170px 90px 170px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		background: $gradient;
+		border-radius: 50%;
+		right: -7px;
+		top: 60px;	
+	}
+}
+
+
+.howto__heading {
+	font-weight: 700;
+	font-size: 26px;
+	margin-bottom: 40px;
+}
+
+.howto__text {
+	margin-left: 40px;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.4;	
+}
+
+
+
+
 
 .faq .section__heading {
 	text-align: left;

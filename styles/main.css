@@ -195,38 +195,6 @@ input[type="radio"]:checked + label:after {
     left: -5px;
   }
 }
-@-moz-keyframes portfolio {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes portfolio {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes portfolio {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes portfolio {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @media screen and (max-width: 1199.98px) {
   html,
   body {
@@ -737,9 +705,6 @@ body {
 .portfolio__image img {
   object-fit: contain;
 }
-.portfolio_animated {
-  animation: portfolio 0.8s ease-out;
-}
 .portfolio__buttons {
   position: absolute;
   bottom: -104px;
@@ -766,10 +731,6 @@ body {
 .portfolio__button:not(:disabled):hover,
 .portfolio__button:not(:disabled):focus {
   cursor: pointer;
-}
-.portfolio__button:not(:disabled):hover svg,
-.portfolio__button:not(:disabled):focus svg {
-  transform: scale(2);
 }
 .portfolio__button:disabled {
   background: #e0e0e0;
@@ -871,12 +832,62 @@ body {
   top: -140px;
 }
 .howto {
-  height: 500px;
   padding-top: 300px;
   padding-bottom: 220px;
 }
 .howto .section__heading {
   text-align: left;
+}
+.howto__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 80px;
+  margin-left: 350px;
+  position: relative;
+  width: 844px;
+}
+.howto__item .portfolio__buttons {
+  bottom: 40px;
+  right: -73px;
+}
+.howto__image {
+  position: absolute;
+  left: -260px;
+}
+.howto__description {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: transparent;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%) 2 2;
+  padding: 70px 170px 90px 170px;
+}
+.howto__description::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
+  border-radius: 50%;
+  right: -7px;
+  top: 60px;
+}
+.howto__heading {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+.howto__text {
+  margin-left: 40px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
 }
 .faq .section__heading {
   text-align: left;

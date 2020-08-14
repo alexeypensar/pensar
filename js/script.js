@@ -68,21 +68,22 @@ let portfolio = function() {
     let pButtonPrev = document.getElementById('pButtonPrev');
     let pButtonNext = document.getElementById('pButtonNext');
 
+
     let portfolioElements = [
         {
-            portfolioHeading: 'Лендинг',
-            portfolioText: 'Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
-            portfolioImageSrc: 'img/portfolio/building.jpg'
+            heading: 'Лендинг',
+            text: 'Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
+            imageSrc: 'img/portfolio/building.jpg'
         },
         {
-            portfolioHeading: 'Лендинг алала',
-            portfolioText: 'АЛАЛА Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
-            portfolioImageSrc: 'img/portfolio/spa.jpg'
+            heading: 'Лендинг алала',
+            text: 'АЛАЛА Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
+            imageSrc: 'img/portfolio/spa.jpg'
         },
         {
-            portfolioHeading: 'Ещё один сайт, для теста',
-            portfolioText: 'ОБА ОБА Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
-            portfolioImageSrc: 'img/portfolio/dentist.jpg'
+            heading: 'Ещё один сайт, для теста',
+            text: 'ОБА ОБА Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
+            imageSrc: 'img/portfolio/dentist.jpg'
         }
     ];
 
@@ -90,32 +91,11 @@ let portfolio = function() {
     //todo добавить ещё один атрибут, чтобы у ссылки href менялся.
 
     // defaults, first portfolio element:
-    pHeading.innerHTML = portfolioElements[0].portfolioHeading;
-    pText.innerHTML = portfolioElements[0].portfolioText;
-    pImage.setAttribute('src', portfolioElements[0].portfolioImageSrc);
+    pHeading.innerHTML = portfolioElements[0].heading;
+    pText.innerHTML = portfolioElements[0].text;
+    pImage.setAttribute('src', portfolioElements[0].imageSrc);
     pButtonPrev.setAttribute('disabled', 'disabled');
 
-
-    let animatePortfolio = function() {
-        // pDescription.classList.toggle('portfolio_animated');
-        pHeading.classList.toggle('portfolio_animated');
-        pText.classList.toggle('portfolio_animated');
-        pImage.classList.toggle('portfolio_animated');
-
-
-        // todo анимашку перехода допилить
-
-        setTimeout(function() {
-            pHeading.classList.remove('portfolio_animated');
-            pText.classList.remove('portfolio_animated');
-            pImage.classList.remove('portfolio_animated');
-        }, 1500);
-
-
-        // pHeading.removeAttribute('style');
-        // pText.removeAttribute('style');
-        // pImage.removeAttribute('style');
-    };
 
 
     pButtonPrev.addEventListener('mouseover', function() {
@@ -132,75 +112,51 @@ let portfolio = function() {
         pButtonNext.firstElementChild.style.transform = 'scale(1)';
     })
 
-    // console.log(pButtonNext.firstElementChild);
-
-    let switchPortfolio = function(counter) {
-        counter = 0;
-
-        pButtonNext.addEventListener('click', function() {
-            pButtonNext.firstElementChild.style.transform = 'scale(1)';
-            animatePortfolio();
-            counter++;
-            pButtonPrev.removeAttribute('disabled');
-            if (counter === portfolioElements.length - 1) {
-                pButtonNext.setAttribute('disabled', 'disabled');
-            };
-            pHeading.innerHTML = portfolioElements[counter].portfolioHeading;
-            pText.innerHTML = portfolioElements[counter].portfolioText;
-            pImage.setAttribute('src', portfolioElements[counter].portfolioImageSrc);
-
-            
-        });
-
-        pButtonPrev.addEventListener('click', function() {
-            pButtonPrev.firstElementChild.style.transform = 'scale(1)';
-            animatePortfolio();
-            counter--;
-            pButtonNext.removeAttribute('disabled');
-            if (counter === 0) {
-                pButtonPrev.setAttribute('disabled', 'disabled');
-            };
-            
-            pHeading.innerHTML = portfolioElements[counter].portfolioHeading;
-            pText.innerHTML = portfolioElements[counter].portfolioText;
-            pImage.setAttribute('src', portfolioElements[counter].portfolioImageSrc);
-        });
-
-        
-
-    };
-
-
-
-    switchPortfolio();
-    
-    // for (let i = 0; i < portfolioElements.length; i++) {
-    //     pHeading.innerHTML = portfolioElements[i].portfolioHeading;
-    //     pText.innerHTML = portfolioElements[i].portfolioText;
-    //     pImage.setAttribute('src', portfolioElements[i].portfolioImageSrc);
-
-    //     pButtonNext.addEventListener('click', function() {
-    //         i++;
-    //         console.log('Next!')
-    //     });
-
-    //     pButtonPrev.addEventListener('click', function() {
-    //         i--;
-    //         console.log('Previous!')
-    //     });
-
-        
-            
-    //     if (i === 0) {
-    //         pButtonPrev.setAttribute('disabled', 'disabled');
-    //     }
-    //     else if (i === portfolioElements.length - 1) {
-    //         pButtonNext.setAttribute('disabled', 'disabled');
-    //     }
-
-    // }
     
 };
+
+
+let switcher = function(prevButton, nextButton, elementsArray, heading, text, imageSrc) {
+    counter = 0;
+
+    nextButton.addEventListener('click', function() {
+        nextButton.firstElementChild.style.transform = 'scale(1)';
+        counter++;
+        prevButton.removeAttribute('disabled');
+        if (counter === elementsArray.length - 1) {
+            nextButton.setAttribute('disabled', 'disabled');
+        };
+        heading.innerHTML = elementsArray[counter].heading;
+        text.innerHTML = elementsArray[counter].text;
+        imageSrc.setAttribute('src', elementsArray[counter].imageSrc);
+
+        
+    });
+
+    prevButton.addEventListener('click', function() {
+        prevButton.firstElementChild.style.transform = 'scale(1)';
+        counter--;
+        nextButton.removeAttribute('disabled');
+        if (counter === 0) {
+            prevButton.setAttribute('disabled', 'disabled');
+        };
+        
+        heading.innerHTML = elementsArray[counter].heading;
+        heading.innerHTML = elementsArray[counter].text;
+        heading.setAttribute('src', elementsArray[counter].imageSrc);
+    });
+
+    
+
+};
+
+
+switcher(pButtonPrev, pButtonNext, portfolioElements, pHeading, pText, portfolioImageSrc);
+
+
+
+
+
 
 portfolio();
 
