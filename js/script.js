@@ -63,6 +63,7 @@ let portfolio = function() {
     let pHeading = document.getElementById('pHeading');
     let pText = document.getElementById('pText');
     let pImage = document.getElementById('pImage');
+    // let pDescription = document.getElementById('pDescription');
 
     let pButtonPrev = document.getElementById('pButtonPrev');
     let pButtonNext = document.getElementById('pButtonNext');
@@ -96,15 +97,19 @@ let portfolio = function() {
 
 
     let animatePortfolio = function() {
+        // pDescription.classList.toggle('portfolio_animated');
         pHeading.classList.toggle('portfolio_animated');
         pText.classList.toggle('portfolio_animated');
         pImage.classList.toggle('portfolio_animated');
 
+
         // todo анимашку перехода допилить
 
-        // pHeading.classList.remove('portfolio_animated');
-        // pText.classList.remove('portfolio_animated');
-        // pImage.classList.remove('portfolio_animated');
+        setTimeout(function() {
+            pHeading.classList.remove('portfolio_animated');
+            pText.classList.remove('portfolio_animated');
+            pImage.classList.remove('portfolio_animated');
+        }, 1500);
 
 
         // pHeading.removeAttribute('style');
@@ -113,10 +118,27 @@ let portfolio = function() {
     };
 
 
+    pButtonPrev.addEventListener('mouseover', function() {
+        pButtonPrev.firstElementChild.style.transform = 'scale(2)';
+    });
+
+    pButtonPrev.addEventListener('mouseout', function() {
+        pButtonPrev.firstElementChild.style.transform = 'scale(1)';
+    })
+    pButtonNext.addEventListener('mouseover', function() {
+        pButtonNext.firstElementChild.style.transform = 'scale(2)';
+    });
+    pButtonNext.addEventListener('mouseout', function() {
+        pButtonNext.firstElementChild.style.transform = 'scale(1)';
+    })
+
+    // console.log(pButtonNext.firstElementChild);
+
     let switchPortfolio = function(counter) {
         counter = 0;
 
         pButtonNext.addEventListener('click', function() {
+            pButtonNext.firstElementChild.style.transform = 'scale(1)';
             animatePortfolio();
             counter++;
             pButtonPrev.removeAttribute('disabled');
@@ -131,12 +153,14 @@ let portfolio = function() {
         });
 
         pButtonPrev.addEventListener('click', function() {
+            pButtonPrev.firstElementChild.style.transform = 'scale(1)';
             animatePortfolio();
             counter--;
+            pButtonNext.removeAttribute('disabled');
             if (counter === 0) {
                 pButtonPrev.setAttribute('disabled', 'disabled');
-                pButtonNext.removeAttribute('disabled');
             };
+            
             pHeading.innerHTML = portfolioElements[counter].portfolioHeading;
             pText.innerHTML = portfolioElements[counter].portfolioText;
             pImage.setAttribute('src', portfolioElements[counter].portfolioImageSrc);
