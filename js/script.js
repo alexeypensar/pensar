@@ -32,92 +32,10 @@ for(let i = 0; i < faqList.length; i++) {
     })
 }
 
-
-
-
-
-
-// faqList.forEach(function(e) {
-
-
-
-//     this.question = e.firstElementChild;
-//     this.answer = e.lastElementChild;
-
-//     console.log(question);
-//     console.log(answer);
-
-//     question.addEventListener('click', function(el) {
-//         el.preventDefault();
-//         answer.classList.toggle('faq__answer_opened');
-
-//         console.log(answer);
-//     })
-// });
-
-let portfolio = function() {
-
-
-    // let portfolioItem = document.getElementById('portfolioItem');
-
-    let pHeading = document.getElementById('pHeading');
-    let pText = document.getElementById('pText');
-    let pImage = document.getElementById('pImage');
-    // let pDescription = document.getElementById('pDescription');
-
-    let pButtonPrev = document.getElementById('pButtonPrev');
-    let pButtonNext = document.getElementById('pButtonNext');
-
-
-    let portfolioElements = [
-        {
-            heading: 'Лендинг',
-            text: 'Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
-            imageSrc: 'img/portfolio/building.jpg'
-        },
-        {
-            heading: 'Лендинг алала',
-            text: 'АЛАЛА Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
-            imageSrc: 'img/portfolio/spa.jpg'
-        },
-        {
-            heading: 'Ещё один сайт, для теста',
-            text: 'ОБА ОБА Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
-            imageSrc: 'img/portfolio/dentist.jpg'
-        }
-    ];
-
-    //todo не забыть элементы в портфолио заменить на нормальные.
-    //todo добавить ещё один атрибут, чтобы у ссылки href менялся.
-
-    // defaults, first portfolio element:
-    pHeading.innerHTML = portfolioElements[0].heading;
-    pText.innerHTML = portfolioElements[0].text;
-    pImage.setAttribute('src', portfolioElements[0].imageSrc);
-    pButtonPrev.setAttribute('disabled', 'disabled');
-
-
-
-    pButtonPrev.addEventListener('mouseover', function() {
-        pButtonPrev.firstElementChild.style.transform = 'scale(2)';
-    });
-
-    pButtonPrev.addEventListener('mouseout', function() {
-        pButtonPrev.firstElementChild.style.transform = 'scale(1)';
-    })
-    pButtonNext.addEventListener('mouseover', function() {
-        pButtonNext.firstElementChild.style.transform = 'scale(2)';
-    });
-    pButtonNext.addEventListener('mouseout', function() {
-        pButtonNext.firstElementChild.style.transform = 'scale(1)';
-    })
-
-    
-};
-
+// функция для блоков "портфолио" и "схема работы"
 
 let switcher = function(prevButton, nextButton, elementsArray, heading, text, imageSrc) {
-    counter = 0;
+    let counter = 0;
 
     nextButton.addEventListener('click', function() {
         nextButton.firstElementChild.style.transform = 'scale(1)';
@@ -125,10 +43,16 @@ let switcher = function(prevButton, nextButton, elementsArray, heading, text, im
         prevButton.removeAttribute('disabled');
         if (counter === elementsArray.length - 1) {
             nextButton.setAttribute('disabled', 'disabled');
-        };
+        }
         heading.innerHTML = elementsArray[counter].heading;
         text.innerHTML = elementsArray[counter].text;
-        imageSrc.setAttribute('src', elementsArray[counter].imageSrc);
+
+        if(imageSrc === null) {
+            return null;
+        }
+        else {
+            imageSrc.setAttribute('src', elementsArray[counter].imageSrc);
+        }
 
         
     });
@@ -139,24 +63,126 @@ let switcher = function(prevButton, nextButton, elementsArray, heading, text, im
         nextButton.removeAttribute('disabled');
         if (counter === 0) {
             prevButton.setAttribute('disabled', 'disabled');
-        };
+        }
         
         heading.innerHTML = elementsArray[counter].heading;
-        heading.innerHTML = elementsArray[counter].text;
-        heading.setAttribute('src', elementsArray[counter].imageSrc);
+        text.innerHTML = elementsArray[counter].text;
+        if(imageSrc === null) {
+            return null;
+        }
+        else {
+            imageSrc.setAttribute('src', elementsArray[counter].imageSrc);
+        }
     });
+
+
+    prevButton.addEventListener('mouseover', function() {
+        prevButton.firstElementChild.style.transform = 'scale(2)';
+    });
+
+    prevButton.addEventListener('mouseout', function() {
+        prevButton.firstElementChild.style.transform = 'scale(1)';
+    })
+    nextButton.addEventListener('mouseover', function() {
+        nextButton.firstElementChild.style.transform = 'scale(2)';
+    });
+    nextButton.addEventListener('mouseout', function() {
+        nextButton.firstElementChild.style.transform = 'scale(1)';
+    })
 
     
 
 };
 
 
-switcher(pButtonPrev, pButtonNext, portfolioElements, pHeading, pText, portfolioImageSrc);
+// настройки для блока портфолио:
+
+let pHeading = document.getElementById('pHeading');
+let pText = document.getElementById('pText');
+let pImage = document.getElementById('pImage');
+let pButtonPrev = document.getElementById('pButtonPrev');
+let pButtonNext = document.getElementById('pButtonNext');
+
+
+let portfolioElements = [
+    {
+        heading: 'Ремонт',
+        text: 'Ремонт Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
+        imageSrc: 'img/portfolio/building.jpg'
+    },
+    {
+        heading: 'Лотус',
+        text: 'Лотус Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
+        imageSrc: 'img/portfolio/spa.jpg'
+    },
+    {
+        heading: 'Стоматология',
+        text: 'Стоматология Одностраничные сайты идеально подойдут для презентации компании, запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500 рублей, срок от 7 дней.',
+        imageSrc: 'img/portfolio/dentist.jpg'
+    }
+];
+
+//todo не забыть элементы в портфолио заменить на нормальные.
+//todo добавить ещё один атрибут, чтобы у ссылки href менялся.
+
+// Портфолио - значения по умолчанию, чтобы отображался первый блок портфолио:
+pHeading.innerHTML = portfolioElements[0].heading;
+pText.innerHTML = portfolioElements[0].text;
+pImage.setAttribute('src', portfolioElements[0].imageSrc);
+pButtonPrev.setAttribute('disabled', 'disabled');
 
 
 
 
+// настройки для блока "схема работы":
+
+let hHeading = document.getElementById('hHeading');
+let hText = document.getElementById('hText');
+let hImage = null;
+let hButtonPrev = document.getElementById('hButtonPrev');
+let hButtonNext = document.getElementById('hButtonNext');
 
 
-portfolio();
+let howtoElements = [
+    {
+        heading: 'ШАГ 1. Начало работы',
+        text: 'В самом начале мы с вами подробно обсуждаем задачу, при необходимости заполняем бриф. Составляем ТЗ (техническое задание) и создаем Доску проекта в Trello. Данный сервис позволит вам отслеживать все этапы работы над вашим сайтом в режиме онлайн.'
+    },
+    {
+        heading: 'ШАГ 2. Прототипирование',
+        text: 'На данном этапе мы проводим анализ конкурентов и ниши вашего бизнеса для создания  лучшего решения задачи. Копирайтером создаются продающие тексты, готовится прототип. Согласовываем с вами данный этап.'
+    },
+    {
+        heading: 'ШАГ 3. Дизайн',
+        text: 'Переходим к созданию дизайна. На основании проведенного анализа и ваших предпочтений отрисовываем сам макет, а также адаптивные версии, всплывающие окна, состояния интерактивных элементов. Оформляем все это в презентацию и снова согласовываем с вами.'
+    },
+    {
+        heading: 'ШАГ 4. Верстка + CMS',
+        text: 'Начинается техническая часть разработки сайта. . Верстаем полученный дизайн и устанавливаем CMS - систему для будущего редактирования . Настраиваем отправку форм, анимируем элементы.'
+    },
+    {
+        heading: 'ШАГ 5. Сдача проекта',
+        text: 'Публикуем сайт на хостинге, подключаем выбранное доменное имя. Добавляем сайт в поисковые системы. Все готово! Вы полноценный владелей вашего собственного сайта.'
+    }
+];
+
+//todo не забыть элементы в блоке "схема работы" заменить на нормальные.
+
+// "Схема работы" - значения по умолчанию, чтобы отображался первый блок:
+hHeading.innerHTML = howtoElements[0].heading;
+hText.innerHTML = howtoElements[0].text;
+// hImage.setAttribute('src', portfolioElements[0].imageSrc);
+hButtonPrev.setAttribute('disabled', 'disabled');
+
+
+// запуск функции для портфолио:
+switcher(pButtonPrev, pButtonNext, portfolioElements, pHeading, pText, pImage);
+
+
+
+// запуск функции для блока "схема работы":
+switcher(hButtonPrev, hButtonNext, howtoElements, hHeading, hText, hImage);
+
+
+// portfolio();
 
