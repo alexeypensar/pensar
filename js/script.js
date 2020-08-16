@@ -162,7 +162,7 @@ let howtoElements = [
     },
     {
         heading: 'ШАГ 5. Сдача проекта',
-        text: 'Публикуем сайт на хостинге, подключаем выбранное доменное имя. Добавляем сайт в поисковые системы. Все готово! Вы полноценный владелей вашего собственного сайта.'
+        text: 'Публикуем сайт на хостинге, подключаем выбранное доменное имя. Добавляем сайт в поисковые системы. Все готово! Вы полноценный владелец вашего собственного сайта.'
     }
 ];
 
@@ -171,7 +171,6 @@ let howtoElements = [
 // "Схема работы" - значения по умолчанию, чтобы отображался первый блок:
 hHeading.innerHTML = howtoElements[0].heading;
 hText.innerHTML = howtoElements[0].text;
-// hImage.setAttribute('src', portfolioElements[0].imageSrc);
 hButtonPrev.setAttribute('disabled', 'disabled');
 
 
