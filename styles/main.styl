@@ -672,6 +672,8 @@ html, body {
 	width: 29%;
 	margin-bottom: 70px;
 	// height: 350px;
+
+
 }
 
 .advantages__icon {
@@ -680,6 +682,7 @@ html, body {
 	justify-content: flex-start;
 	align-items center;
 	height: 43px;
+	position: relative;
 
 }
 
@@ -859,17 +862,13 @@ html, body {
 	width: 100%;
 	height: auto;
 	{border-gradient-bold};
-	// border: 3px solid;
-	// border: 3px solid $red;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-	// padding-left: 35px;
 	position: relative;
-	transition: all 0.4s ease;
-	// margin-bottom: 35px;
-	
+	transition: height 0.4s ease;
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -878,7 +877,8 @@ html, body {
 		border-radius: 50%;
 		background-color: $red;
 		left: -10px;
-		top: 32px;	
+		top: 32px;
+		transition: all 0.4s ease;
 	}
 
 	&::after {
@@ -887,6 +887,7 @@ html, body {
 		right: 35px;
 		top: 30px;
 		transition: all 0.4s ease;
+		transform: rotate(0deg);
 	}
 
 	&:not(:last-child) {
@@ -894,9 +895,14 @@ html, body {
 	}
 
 	&_opened {
+		transition: height 0.4s ease;
 		&::after {
 			transform: rotate(-180deg);
 			// fill: gray;
+			transition: all 0.4s ease;
+		}
+		&::before {
+			top: 83px;
 			transition: all 0.4s ease;
 		}
 	}
@@ -928,8 +934,10 @@ html, body {
 	font-weight: 300;
 	display: none;
 
+
 	&_opened {
 		display: inline-block;
+
 
 		// color: $red;
 	}

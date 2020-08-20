@@ -32,6 +32,9 @@ for(let i = 0; i < faqList.length; i++) {
     })
 }
 
+
+
+
 // функция для блоков "портфолио" и "схема работы"
 
 let switcher = function(prevButton, nextButton, elementsArray, heading, text, imageSrc) {
