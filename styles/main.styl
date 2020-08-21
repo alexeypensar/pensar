@@ -4,7 +4,6 @@
 @import "__helpers.styl";
 @import "__animations.styl";
 @import "__adaptive.styl";
-
 * {
 	transition: all 0.4s ease;
 }
@@ -96,11 +95,11 @@ html, body {
 	//opacity: 0;
 }
 
-.header__submenu {
-	&_opened {
-		margin-top: 40px;
+.header__li_submenu:hover, .header__li_submenu:focus {
+	.header__submenu {
+		//padding-top: 40px;
 		position: absolute;
-		top: 0;
+		//top: 40px;
 		right: 0;
 		display: flex;
 		flex-direction: column;
@@ -114,6 +113,10 @@ html, body {
 		background-color: $white;
 		opacity: 1;
 		//border-radius: 10px;
+	}
+	.submenu__arrow {
+		transform: rotate(180deg);
+
 	}
 }
 
@@ -146,9 +149,7 @@ html, body {
 	position: relative;
 	top: -1px;
 	margin-left: 7px;
-	&_active {
-		transform: rotate(180deg);
-	}
+	transform: rotate(0deg);
 }
 
 .header__li:first-child .header__link:hover svg g path,
@@ -284,13 +285,9 @@ html, body {
 }
 
 .services {
-	
 	padding-top: 120px;
 	padding-bottom: 200px;
 	position: relative;
-	
-	
-	
 	//position: relative;
 }
 
@@ -322,7 +319,6 @@ html, body {
 	}
 }
 
-
 .services__list {
 	display: flex;
 	flex-direction: row;
@@ -332,7 +328,6 @@ html, body {
 		content: url('../img/services.jpg');
 		position: absolute;
 		left: -270px;
-
 		top: 70%;
 	}
 }
@@ -351,18 +346,15 @@ html, body {
 	top: -26px;
 	left: 26px;
 	background-color: #fff;
-
 	//background-color: $white;
 	& h4 {
 		font-weight: 500;
 		font-size: 26px;
 	}
-
 	& p {
 		font-weight: 300;
 		font-size: 16px;
 	}
-
 	& a {
 		font-weight: 500;
 		font-size: 18px;
@@ -379,18 +371,14 @@ html, body {
 			top: 0;
 			left: 0;
 		}
-
 		&:hover, &:focus {
 			{text-gradient}
-
 			& img {
 				animation: 0.8s arrow ease-in-out;
 				//animation-delay: 0.15s;
-
 			}
 		}
 	}
-
 	&::after {
 		content: '';
 		position: absolute;
@@ -402,8 +390,6 @@ html, body {
 		border-radius: 50%;
 		transition: all 0.8s ease-in-out;
 	}
-
-
 }
 
 .services__item_shadow {
@@ -412,14 +398,12 @@ html, body {
 	position: relative;
 	content: '';
 	background: $gradient;
-
 	&:hover, &:focus {
 		.services__item {
 			background-color: $black;
 			& a, & h4, & p {
 				color: $white;
 			}
-
 			&::after {
 				top: 81%;
 				transition: all 0.8s ease-in-out;
@@ -434,13 +418,11 @@ html, body {
 	& .services__item {
 		top: 26px;
 		left: -26px;
-
 		&::after {
 			left: -8px;
 			top: calc(100% - 8px);
 		}
 	}
-
 	&:hover, &:focus {
 		& .services__item::after {
 			left: 82%;
@@ -448,17 +430,13 @@ html, body {
 	}
 }
 
-
 .services__item_shadow:nth-child(3) {
 	//margin-left: 26px;
 	margin-top: 150px;
 	& .services__item {
 		top: -26px;
 		left: -26px;
-
-
 	}
-
 	&:hover, &:focus {
 		& .services__item::after {
 			right: 82%;
@@ -487,23 +465,19 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	align-self: flex-end;
-
 	& img {
 		position: relative;
 		top: 0;
 		left: 0;
 		margin-left: 15px;
 	}
-
 	&:hover, &:focus {
 		{text-gradient}
-
 		& img {
 			animation: 0.8s arrow ease-in-out;
 		}
 	}
 }
-
 
 .portfolio__items {
 	margin-top: 80px;
@@ -518,7 +492,6 @@ html, body {
 	flex-direction: row;
 	align-items: center;
 	// width: 100%;
-	
 }
 
 .portfolio__description {
@@ -541,18 +514,14 @@ html, body {
 		background: $gradient;
 		border-radius: 50%;
 		left: -9px;
-		top: 70px;	
-	}	
-
-	
+		top: 70px;
+	}
 }
 
 .portfolio__heading {
 	font-weight: 500;
 	font-size: 26px;
 	line-height: 1;
-
-	
 }
 
 .portfolio__text {
@@ -562,31 +531,24 @@ html, body {
 	margin-left: 60px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-
 }
 
 .portfolio__link_bottom {
-	align-self: flex-end;	
+	align-self: flex-end;
 }
 
-
 .portfolio__image {
-	z-index: 3;	
+	z-index: 3;
 	flex-shrink: 0;
 	width: 730px;
-
 	& img {
-		object-fit: contain;	
+		object-fit: contain;
 	}
-
-	
 }
 
 // .portfolio_animated {
 // 	animation: portfolio 1.5s ease-out;
 // }
-
-
 .portfolio__buttons {
 	position: absolute;
 	bottom: -104px;
@@ -603,50 +565,40 @@ html, body {
 	background: $gradient;
 	padding: 0;
 	& svg path {
-		fill: $white;	
+		fill: $white;
 	}
 	& svg {
 		position: relative;
 		top: 0;
-		left: 0;	
+		left: 0;
 	}
 	&:not(:disabled) {
-
 		&:hover, &:focus {
 			cursor: pointer;
 			// & svg {
 			// 	transform: scale(2);
-				
 			// }
 		}
-	
 	}
-
 	&:disabled {
 		background: #E0E0E0;
-
 		& svg path {
-			fill: $black;	
-		}	
+			fill: $black;
+		}
 	}
-	
 }
-
 
 .advantages {
 	background-color: $black;
 	padding-top: 130px;
 	padding-bottom: 60px;
-
 	& .section__heading {
 		color: $white;
 	}
-
 }
 
 .advantages__wrapper {
-	position: relative;	
-	
+	position: relative;
 }
 
 .advantages__image_superman {
@@ -662,7 +614,6 @@ html, body {
 	justify-content: space-between;
 	align-items: flex-start;
 	margin-top: 120px;
-
 }
 
 .advantages__item {
@@ -672,8 +623,6 @@ html, body {
 	width: 29%;
 	margin-bottom: 70px;
 	// height: 350px;
-
-
 }
 
 .advantages__icon {
@@ -683,7 +632,6 @@ html, body {
 	align-items center;
 	height: 43px;
 	position: relative;
-
 }
 
 .advantages__heading {
@@ -693,8 +641,8 @@ html, body {
 	margin-top: 30px;
 	margin-bottom: 20px;
 	color: $white;
-
 }
+
 .advantages__text {
 	color: $white;
 	font-weight: 300;
@@ -712,6 +660,17 @@ html, body {
 	flex-direction: row;
 	justify-content center;
 	align-items center;
+	text-decoration none;
+	& img {
+		position: relative;
+		left: 0;
+		top: 2px;
+	}
+	&:hover, &:focus {
+		& img {
+			animation: arrow 0.8s ease;
+		}
+	}
 }
 
 .start-project__heading {
@@ -719,40 +678,24 @@ html, body {
 	font-size: 42px;
 	margin-right: 45px;
 	color: $white;
-	line-height:1;
-
+	line-height: 1;
 }
 
 .start-project__link {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items center;
-	text-decoration none;
-
-	& img {
-		position: relative;
-		left: 0;
-	}
-
-	&:hover, &:focus {
-		& img {
-			animation: arrow 0.8s ease;	
-		}	
-	}
-
+	//display: flex;
+	//flex-direction: row;
+	//justify-content: flex-start;
+	//align-items center;
 }
 
 .yeah {
 	position: relative;
-
 	& img {
 		position: absolute;
 		right: 0;
 		top: -140px;
-	}	
+	}
 }
-
 
 .howto {
 	// height: 500px; // todo убрать потом
@@ -766,7 +709,6 @@ html, body {
 	text-align: left;
 }
 
-
 .howto__item {
 	display: flex;
 	flex-direction: row;
@@ -778,18 +720,15 @@ html, body {
 	position: relative;
 	width: 844px;
 	// width: 60%;
-
 	& .portfolio__buttons {
 		bottom: 40px;
-		right: -73px;	
+		right: -73px;
 	}
-	
-		
 }
 
 .howto__image {
 	position: absolute;
-	left: -260px;	
+	left: -260px;
 }
 
 .howto__description {
@@ -801,7 +740,6 @@ html, body {
 	align-items: flex-start;
 	{border-gradient};
 	padding: 70px 170px 90px 170px;
-
 	&::after {
 		content: '';
 		position: absolute;
@@ -810,10 +748,9 @@ html, body {
 		background: $gradient;
 		border-radius: 50%;
 		right: -7px;
-		top: 60px;	
+		top: 60px;
 	}
 }
-
 
 .howto__heading {
 	font-weight: 700;
@@ -825,12 +762,8 @@ html, body {
 	margin-left: 40px;
 	font-weight: 300;
 	font-size: 16px;
-	line-height: 1.4;	
+	line-height: 1.4;
 }
-
-
-
-
 
 .faq .section__heading {
 	text-align: left;
@@ -845,7 +778,6 @@ html, body {
 	position: absolute;
 	top: -50px;
 	right: -100px;
-
 }
 
 .faq__list {
@@ -868,7 +800,6 @@ html, body {
 	align-items: flex-start;
 	position: relative;
 	transition: height 0.4s ease;
-
 	&::before {
 		content: '';
 		position: absolute;
@@ -880,7 +811,6 @@ html, body {
 		top: 32px;
 		transition: all 0.4s ease;
 	}
-
 	&::after {
 		content: url('../img/icons/arrow-faq.svg');
 		position: absolute;
@@ -889,11 +819,9 @@ html, body {
 		transition: all 0.4s ease;
 		transform: rotate(0deg);
 	}
-
 	&:not(:last-child) {
-		margin-bottom: 35px;	
+		margin-bottom: 35px;
 	}
-
 	&_opened {
 		transition: height 0.4s ease;
 		&::after {
@@ -906,8 +834,6 @@ html, body {
 			transition: all 0.4s ease;
 		}
 	}
-
-	
 }
 
 .faq__question {
@@ -923,8 +849,6 @@ html, body {
 	display: inline-block;
 	width: 100%;
 	position: relative;
-
-	
 }
 
 .faq__answer {
@@ -933,12 +857,8 @@ html, body {
 	padding-right: 35px;
 	font-weight: 300;
 	display: none;
-
-
 	&_opened {
 		display: inline-block;
-
-
 		// color: $red;
 	}
 }
@@ -947,7 +867,6 @@ html, body {
 	margin-left: 95px;
 	color: $black;
 	text-decoration: none;
-
 	&:hover, &:focus {
 		color: $white;
 	}
@@ -957,12 +876,9 @@ html, body {
 	background-color: $black;
 	padding-top: 100px;
 	padding-bottom: 100px;
-	
-
 	& .portfolio__headings {
-		text-align: left;	
+		text-align: left;
 	}
-
 	& .section__heading {
 		color: $white;
 		text-align: left;
@@ -993,7 +909,6 @@ html, body {
 	width: 450px;
 	height: 80px;
 	padding: 30px;
-	
 	// border: 2px solid $red;
 	{border-gradient};
 	background-color: $white;
@@ -1011,11 +926,9 @@ html, body {
 	// border: none;
 	background: $gradient;
 	color: $white;
-	
 	& svg path {
 		fill: $white;
 	}
-
 }
 
 .contacts__label_checkbox {
@@ -1023,11 +936,9 @@ html, body {
 	font-size: 14px;
 	line-height: 16px;
 	color: $white;
-
 	& a {
 		color: $white;
-
-	}	
+	}
 }
 
 .contacts__image_woman {
@@ -1046,7 +957,6 @@ html, body {
 	margin-left: 95px;
 	// margin-right: 95px;
 	flex-wrap: wrap;
-
 	& a {
 		color: $white;
 		text-decoration none;
@@ -1055,10 +965,9 @@ html, body {
 			& .contacts__image {
 				background: $gradient;
 				// transition: all 0.4s ease;
-			}	
-		}	
+			}
+		}
 	}
-
 }
 
 .contacts__item {
@@ -1066,7 +975,6 @@ html, body {
 	// max-width: 28%;	
 	margin-bottom: 25px;
 	flex-basis: 33%;
-
 	& figcaption {
 		font-weight: 500;
 		font-size: 18px;
@@ -1083,36 +991,29 @@ html, body {
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
-
 	& .contacts__phone {
 		font-weight: 700;
 		font-size: 30px;
 	}
 }
 
-
-
 .contacts__image {
 	min-width: 60px;
 	min-height: 60px;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;	
+	justify-content: center;
 	align-items: center;
 	margin-right: 25px;
 	border: 2px solid $red;
 	border-radius: 50%;
 }
 
-
-
 .footer {
 	background-color: $white;
 	padding-top: 50px;
 	padding-bottom: 40px;
 }
-
-
 
 .footer__ul {
 	display: flex;
@@ -1122,7 +1023,6 @@ html, body {
 	margin-bottom: 30px;
 	margin-left: 95px;
 	margin-right: 95px;
-		
 }
 
 .footer__link {
@@ -1139,7 +1039,7 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: flex-end;	
+	align-items: flex-end;
 }
 
 .footer__copyright {
@@ -1174,7 +1074,6 @@ html, body {
 // 	// animation-name: images;
 // 	animation: images 5s ease-in-out infinite;	
 // }
-
 // todo убрать эту анимацию, если не будем пользоваться
 
 

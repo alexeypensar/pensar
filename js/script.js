@@ -1,15 +1,14 @@
-let submenu = document.getElementById('submenu');
-let submenuButton = document.getElementById('submenuButton');
-let submenuArrow = document.getElementById('submenuArrow');
+// let submenu = document.getElementById('submenu');
+// let submenuButton = document.getElementById('submenuButton');
+// let submenuArrow = document.getElementById('submenuArrow');
+//
+//
+// submenuButton.addEventListener('click', function(el) {
+//     el.preventDefault();
+//     submenu.classList.toggle('header__submenu_opened');
+//     submenuArrow.classList.toggle('submenu__arrow_active');
+// });
 
-
-submenuButton.addEventListener('click', function(el) {
-    el.preventDefault();
-    submenu.classList.toggle('header__submenu_opened');
-    submenuArrow.classList.toggle('submenu__arrow_active');
-});
-
-//todo убирать субменю по клику вне блока, либо по клику на ссылку
 
 
 // document.addEventListener('mouseup', function(e) {
@@ -181,10 +180,7 @@ hButtonPrev.setAttribute('disabled', 'disabled');
 switcher(pButtonPrev, pButtonNext, portfolioElements, pHeading, pText, pImage);
 
 
-
 // запуск функции для блока "схема работы":
 switcher(hButtonPrev, hButtonNext, howtoElements, hHeading, hText, hImage);
 
-
-// portfolio();
 
