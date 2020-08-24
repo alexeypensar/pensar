@@ -152,7 +152,7 @@ article b {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 25px;
   width: 100%;
 }
