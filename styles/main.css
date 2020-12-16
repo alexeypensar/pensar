@@ -671,6 +671,7 @@ body {
   border-image: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%) 2 2;
   position: relative;
   right: -2px;
+  min-height: 420px;
 }
 .portfolio__description::before {
   content: '';
@@ -697,6 +698,9 @@ body {
 }
 .portfolio__link_bottom {
   align-self: flex-end;
+  position: absolute;
+  bottom: 40px;
+  right: 85px;
 }
 .portfolio__image {
   z-index: 3;
