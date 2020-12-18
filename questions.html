@@ -23,7 +23,7 @@
 
 <body>
 
-    <header class="header">
+    <header class="header faq__header">
 
         <nav class="header__nav container">
             <h2 class="header__logo">pensar<span class="header__logo_red">.</span></h2>
@@ -68,27 +68,20 @@
                 <div class="header__lines_left"></div>
                 <div class="header__lines_right"></div>
             </div>
-            <h1 class="header__heading_h1">Часто задаваемые вопросы.</h1>
-            <h2 class="header__heading_h2">Здесь мы собрали всю информацию, которую вы запрашиваете чаще всего.</h2>
+            <h1 class="header__heading_h1 faq__heading_h1">Часто задаваемые вопросы.</h1>
+            <h2 class="header__heading_h2 faq__heading_h2">Здесь мы собрали всю информацию, которую вы запрашиваете чаще всего.</h2>
 
 
         </section>
 
     </header>
 
-    <main>
+    <main class="faq-page">
 
 
 
         <section class="faq container">
-            <div class="portfolio__header">
-                <div class="portfolio__headings">
-                    <h2 class="section__heading_small">faq</h2>
-                    <h3 class="section__heading">Вы спрашивали<span class="section__heading_red">?</span><br>Мы
-                        отвечаем<span class="section__heading_red">!</span></h3>
 
-                </div>
-            </div>
 
             <ul class="faq__list">
                 <li class="faq__item">
@@ -116,32 +109,27 @@
                     <p class="faq__answer">А блаблабла</p>
                 </li>
 
+                <li class="faq__item">
+                    <a href="#" class="faq__question">Что будет, если мне не понравится дизайн?</a>
+                    <p class="faq__answer">А блаблабла</p>
+                </li>
+                <li class="faq__item">
+                    <a href="#" class="faq__question">Что означает поэтапная оплата?</a>
+                    <p class="faq__answer">А блаблабла</p>
+                </li>
+                <li class="faq__item">
+                    <a href="#" class="faq__question">С какими CMS вы работаете?</a>
+                    <p class="faq__answer">А блаблабла</p>
+                </li>
+
                 <!-- todo плавное раскрытие списка сделать -->
 
             </ul>
 
-            <a class="button" href="#">Показать все
-                <svg width="32" height="16" viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M11 8C11 9.10457 10.1046 10 9 10C7.89543 10 7 9.10457 7 8C7 6.89543 7.89543 6 9 6C10.1046 6 11 6.89543 11 8Z"
-                        fill="url(#paint2_linear)" />
-                    <path
-                        d="M31.7071 8.70711C32.0976 8.31658 32.0976 7.68342 31.7071 7.29289L25.3431 0.928933C24.9526 0.538409 24.3195 0.538409 23.9289 0.928933C23.5384 1.31946 23.5384 1.95262 23.9289 2.34315L29.5858 8L23.9289 13.6569C23.5384 14.0474 23.5384 14.6805 23.9289 15.0711C24.3195 15.4616 24.9526 15.4616 25.3431 15.0711L31.7071 8.70711ZM14 9L31 9V7L14 7V9ZM10 8C10 8.55228 9.55229 9 9 9V11C10.6569 11 12 9.65685 12 8H10ZM9 9C8.44771 9 8 8.55228 8 8H6C6 9.65685 7.34315 11 9 11V9ZM8 8C8 7.44772 8.44771 7 9 7V5C7.34315 5 6 6.34315 6 8H8ZM9 7C9.55229 7 10 7.44772 10 8H12C12 6.34315 10.6569 5 9 5V7ZM0 9H4V7H0V9Z"
-                        fill="url(#paint3_linear)" />
-                    <defs>
-                        <linearGradient id="paint2_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FF416C" />
-                            <stop offset="1" stop-color="#FF4B2B" />
-                        </linearGradient>
-                        <linearGradient id="paint3_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FF416C" />
-                            <stop offset="1" stop-color="#FF4B2B" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </a>
+            <p class="faq-page__text">Если вы не нашли ответа на интересующий вас вопрос, наши контакты ниже <span class="faq-page__text_red">:)</span></p>
+
+
+<!--            todo реальные вопросы-ответы прописать-->
 
 
 
@@ -150,109 +138,117 @@
         <section class="contacts">
 
             <div class="contacts__wrapper container">
-                <img class=contacts__image_woman src="img/footer.jpg" alt="Позвоните нам">
+
                 <div class="portfolio__headings">
                     <h2 class="section__heading_small">Контакты</h2>
                     <h3 class="section__heading">Нужен сайт<span class="section__heading_red">?</span><br>Свяжитесь с
                         нами<span class="section__heading_red">!</span></h3>
 
-                    <form action="send/order.php" method="post" class="contacts__form">
+                    <div class="faq-page__contacts">
+                        <form action="send/order.php" method="post" class="contacts__form">
 
-                        <label class="contacts__label" for="orderName">Ваше имя</label>
-                        <input class="contacts__input" type="text" id="orderName" placeholder="Введите имя" required>
+                            <label class="contacts__label" for="orderName">Ваше имя</label>
+                            <input class="contacts__input" type="text" id="orderName" placeholder="Введите имя"
+                                   required>
 
-                        <label class="contacts__label" for="orderPhone">Ваш телефон</label>
-                        <input class="contacts__input" type="text" id="orderPhone" placeholder="Введите телефон"
-                            required>
+                            <label class="contacts__label" for="orderPhone">Ваш телефон</label>
+                            <input class="contacts__input" type="text" id="orderPhone" placeholder="Введите телефон"
+                                   required>
 
-                        <button type="submit" class="button">Отправить
-                            <svg width="32" height="16" viewBox="0 0 32 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11 8C11 9.10457 10.1046 10 9 10C7.89543 10 7 9.10457 7 8C7 6.89543 7.89543 6 9 6C10.1046 6 11 6.89543 11 8Z"
-                                    fill="url(#paint5_linear)" />
-                                <path
-                                    d="M31.7071 8.70711C32.0976 8.31658 32.0976 7.68342 31.7071 7.29289L25.3431 0.928933C24.9526 0.538409 24.3195 0.538409 23.9289 0.928933C23.5384 1.31946 23.5384 1.95262 23.9289 2.34315L29.5858 8L23.9289 13.6569C23.5384 14.0474 23.5384 14.6805 23.9289 15.0711C24.3195 15.4616 24.9526 15.4616 25.3431 15.0711L31.7071 8.70711ZM14 9L31 9V7L14 7V9ZM10 8C10 8.55228 9.55229 9 9 9V11C10.6569 11 12 9.65685 12 8H10ZM9 9C8.44771 9 8 8.55228 8 8H6C6 9.65685 7.34315 11 9 11V9ZM8 8C8 7.44772 8.44771 7 9 7V5C7.34315 5 6 6.34315 6 8H8ZM9 7C9.55229 7 10 7.44772 10 8H12C12 6.34315 10.6569 5 9 5V7ZM0 9H4V7H0V9Z"
-                                    fill="url(#paint6_linear)" />
-                                <defs>
-                                    <linearGradient id="paint5_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#FF416C" />
-                                        <stop offset="1" stop-color="#FF4B2B" />
-                                    </linearGradient>
-                                    <linearGradient id="paint6_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#FF416C" />
-                                        <stop offset="1" stop-color="#FF4B2B" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </button>
-                        <div>
-                            <input type="checkbox" required checked id="orderCheckbox">
-                            <label class="contacts__label_checkbox" for="orderCheckbox">Согласен с <a
-                                    href="policy.html">обработкой персональных данных</a></label>
-                        </div>
-
-
-
-                    </form>
-
-                    <article class="contacts__items">
-                        <a class="contacts__item" href="#">
-                            <figure>
-                                <div class="contacts__image">
-                                    <img src="img/icons/contacts-phone.svg" alt="">
-                                </div>
-
-                                <figcaption class="contacts__phone">+ 7 913 900-77-88</figcaption>
-                            </figure>
-
-                        </a>
-                        <a class="contacts__item contacts__item_small" href="#">
-                            <figure>
-                                <div class="contacts__image">
-                                    <img src="img/icons/contacts-telegram.svg" alt="">
-                                </div>
-
-
-                                <figcaption>telegram</figcaption>
-                            </figure>
-
-                        </a>
-                        <figure class="contacts__item">
-                            <div class="contacts__image">
-                                <img src="img/icons/contacts-location.svg" alt="">
+                            <button type="submit" class="button">Отправить
+                                <svg width="32" height="16" viewBox="0 0 32 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                            d="M11 8C11 9.10457 10.1046 10 9 10C7.89543 10 7 9.10457 7 8C7 6.89543 7.89543 6 9 6C10.1046 6 11 6.89543 11 8Z"
+                                            fill="url(#paint5_linear)"/>
+                                    <path
+                                            d="M31.7071 8.70711C32.0976 8.31658 32.0976 7.68342 31.7071 7.29289L25.3431 0.928933C24.9526 0.538409 24.3195 0.538409 23.9289 0.928933C23.5384 1.31946 23.5384 1.95262 23.9289 2.34315L29.5858 8L23.9289 13.6569C23.5384 14.0474 23.5384 14.6805 23.9289 15.0711C24.3195 15.4616 24.9526 15.4616 25.3431 15.0711L31.7071 8.70711ZM14 9L31 9V7L14 7V9ZM10 8C10 8.55228 9.55229 9 9 9V11C10.6569 11 12 9.65685 12 8H10ZM9 9C8.44771 9 8 8.55228 8 8H6C6 9.65685 7.34315 11 9 11V9ZM8 8C8 7.44772 8.44771 7 9 7V5C7.34315 5 6 6.34315 6 8H8ZM9 7C9.55229 7 10 7.44772 10 8H12C12 6.34315 10.6569 5 9 5V7ZM0 9H4V7H0V9Z"
+                                            fill="url(#paint6_linear)"/>
+                                    <defs>
+                                        <linearGradient id="paint5_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FF416C"/>
+                                            <stop offset="1" stop-color="#FF4B2B"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint6_linear" x1="0" y1="6" x2="14.9722" y2="23.4392"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FF416C"/>
+                                            <stop offset="1" stop-color="#FF4B2B"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <div>
+                                <input type="checkbox" required checked id="orderCheckbox">
+                                <label class="contacts__label_checkbox" for="orderCheckbox">Согласен с <a
+                                        href="policy.html">обработкой персональных данных</a></label>
                             </div>
-                            <figcaption>Работаем по всей России</figcaption>
-                        </figure>
 
-                        <a class="contacts__item" href="mailto:order@pensar.ru">
-                            <figure>
+
+                        </form>
+
+                        <article class="contacts__items">
+                            <a class="contacts__item" href="#">
+                                <figure>
+                                    <div class="contacts__image">
+                                        <img src="img/icons/contacts-phone.svg" alt="">
+                                    </div>
+
+                                    <figcaption class="contacts__phone">+ 7 913 900-77-88</figcaption>
+                                </figure>
+
+                            </a>
+
+
+                            <a class="contacts__item" href="mailto:order@pensar.ru">
+                                <figure>
+                                    <div class="contacts__image">
+                                        <img src="img/icons/contacts-mail.svg" alt="">
+                                    </div>
+                                    <figcaption>order@pensar.ru</figcaption>
+                                </figure>
+
+                            </a>
+
+                            <a class="contacts__item contacts__item_small" href="#">
+                                <figure>
+                                    <div class="contacts__image">
+                                        <img src="img/icons/contacts-telegram.svg" alt="">
+                                    </div>
+
+
+                                    <figcaption>telegram</figcaption>
+                                </figure>
+
+                            </a>
+
+
+                            <a class="contacts__item contacts__item_small" href="#">
+                                <figure>
+                                    <div class="contacts__image">
+                                        <img src="img/icons/contacts-whatsapp.svg" alt="">
+                                    </div>
+                                    <figcaption>whatsapp</figcaption>
+                                </figure>
+
+                            </a>
+
+                            <figure class="contacts__item">
                                 <div class="contacts__image">
-                                    <img src="img/icons/contacts-mail.svg" alt="">
+                                    <img src="img/icons/contacts-location.svg" alt="">
                                 </div>
-                                <figcaption>order@pensar.ru</figcaption>
+                                <figcaption>Работаем по всей России</figcaption>
                             </figure>
 
-                        </a>
-                        <a class="contacts__item contacts__item_small" href="#">
-                            <figure>
+                            <figure class="contacts__item">
                                 <div class="contacts__image">
-                                    <img src="img/icons/contacts-whatsapp.svg" alt="">
+                                    <img src="img/icons/contacts-time.svg" alt="">
                                 </div>
-                                <figcaption>whatsapp</figcaption>
+                                <figcaption>При работе над вашим проектом, учтем ваш часовой пояс!</figcaption>
                             </figure>
 
-                        </a>
-                        <figure class="contacts__item">
-                            <div class="contacts__image">
-                                <img src="img/icons/contacts-time.svg" alt="">
-                            </div>
-                            <figcaption>При работе над вашим проектом, учтем ваш часовой пояс!</figcaption>
-                        </figure>
-
-                    </article>
+                        </article>
+                    </div>
 
                 </div>
             </div>

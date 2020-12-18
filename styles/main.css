@@ -1175,3 +1175,50 @@ body {
 .footer__policy:focus {
   text-decoration: underline;
 }
+.faq__header {
+  background: #fffffe;
+  height: auto;
+  min-height: auto;
+}
+.faq__heading_h1 {
+  font-size: 80px;
+  text-align: center;
+  width: 80%;
+}
+.faq__heading_h2 {
+  font-size: 42px;
+  text-align: center;
+  width: 65%;
+}
+.faq-page .faq__list {
+  align-items: center;
+  margin: 70px auto 60px auto;
+}
+.faq-page .faq {
+  padding-bottom: 100px;
+}
+.faq-page__text {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  margin-left: 210px;
+  display: inline-block;
+  width: 55%;
+}
+.faq-page__text_red {
+  background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.faq-page__contacts {
+  display: flex;
+}
+.faq-page__contacts .contacts__items {
+  position: relative;
+  top: -50px;
+  flex-direction: column;
+  margin-top: 0;
+  align-items: flex-start;
+  width: 30%;
+  margin-left: 200px;
+}
