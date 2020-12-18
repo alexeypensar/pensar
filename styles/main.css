@@ -1225,3 +1225,9 @@ body {
   width: 30%;
   margin-left: 200px;
 }
+.portfolio-page .portfolio__items {
+  margin-bottom: 0;
+}
+.portfolio-page .portfolio__item:not(:last-of-type) {
+  margin-bottom: 40px;
+}
