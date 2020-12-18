@@ -1086,22 +1086,27 @@ html, body {
 
 // questions page
 
-.faq__header, .portfolio-page__header {
+.faq__header, .portfolio-page__header, .contacts-page__header {
 	background: #FFFFFE;
 	height: auto;
 	min-height: auto;
 }
 
-.faq__heading_h1, .portfolio-page__heading_h1 {
+.faq__heading_h1, .portfolio-page__heading_h1, .contacts-page__heading_h1 {
 	font-size: 80px;
 	text-align: center;
 	width: 80%;
 }
 
-.faq__heading_h2, .portfolio-page__heading_h2 {
+.faq__heading_h2, .portfolio-page__heading_h2, .contacts-page__heading_h2 {
 	font-size: 42px;
 	text-align: center;
 	width: 65%;
+}
+
+.contacts-page__heading_h2 {
+	width: 45%;
+	line-height: 49px;
 }
 
 .faq-page {
@@ -1154,4 +1159,37 @@ html, body {
 	& .portfolio__item:not(:last-of-type) {
 		margin-bottom: 40px;
 	}
+}
+
+.contacts-page__header {
+	padding-bottom: 70px;
+
+
+}
+
+.contacts-page__content {
+	& figcaption {
+		color: $black;
+	}
+
+	& .contacts__items {
+		margin-right: 95px;
+		align-items: flex-start;
+
+		&_right {
+			& .contacts__item:last-child {
+				width: 70%;
+			}
+		}
+	}
+
+
+}
+
+
+.contacts-page__image_woman {
+	position: absolute;
+	top: -200px;
+	right: 20px;
+
 }
