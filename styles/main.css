@@ -1199,6 +1199,7 @@ body {
 .contacts-page__heading_h2 {
   width: 45%;
   line-height: 49px;
+  margin-bottom: 0;
 }
 .faq-page .faq__list {
   align-items: center;
