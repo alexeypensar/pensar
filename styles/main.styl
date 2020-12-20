@@ -1205,6 +1205,7 @@ html, body {
 .type__header {
 	background: none;
 	height: auto;
+	min-height: auto;
 }
 
 .type__text {
@@ -1268,4 +1269,179 @@ html, body {
 		}
 	}
 
+}
+
+.type__prices {
+	padding-top: 20px;
+	padding-bottom: 160px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.type__subheading {
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 49px;
+	text-align: center;
+	display: inline-block;
+	width: 40%;
+	margin-bottom: 70px;
+
+
+	&_red {
+		{text-gradient};
+	}
+}
+
+.type__pricelist {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.price {
+	{border-gradient};
+	padding: 60px 60px 85px 60px;
+	position: relative;
+	width: 430px;
+}
+
+.price__heading {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 35px;
+	margin-bottom: 75px;
+	text-align: center;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+
+		left: 0;
+		bottom: -32px;
+		height: 1px;
+		width: 100%;
+		background: $gradient;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: calc(50% - 8px);
+		bottom: -40px;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: $gradient;
+		transition: all 0.6s ease;
+		transform: scale(1);
+
+	}
+}
+
+.price__cost {
+	text-align: center;
+	font-weight: 500;
+	font-size: 26px;
+	margin-top: 50px;
+}
+
+.price .button {
+	width: 380px;
+	height: 86px;
+	position: absolute;
+	bottom: -43px;
+	left: calc(50% - 190px);
+	background: $gradient;
+	color: #fffffe;
+
+}
+
+.price__advantage {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+
+	&:not(:last-child) {
+		margin-bottom: 18px;
+	}
+
+	&_disabled {
+		color: #E0E0E0;
+		text-decoration: line-through;
+		font-weight: 400;
+	}
+}
+
+.price:hover, .price:focus {
+	background-color: $black;
+
+	& .price__heading, & .price__advantage:not(.price__advantage_disabled), & .price__cost {
+		color: #FFFFFF;
+	}
+}
+
+.price:nth-of-type(1) {
+	&:hover, &:focus {
+		& .price__heading::before {
+			left: 0;
+			transform: scale(1.6);
+			transition: all 0.6s ease-in-out;
+		}
+	}
+}
+
+.price:nth-of-type(2) {
+	&:hover, &:focus {
+		& .price__heading::before {
+			animation: pricePulse 1.4s ease-in-out;
+		}
+	}
+}
+
+.price:nth-of-type(3) {
+	&:hover, &:focus {
+		& .price__heading::before {
+			left: 100%;
+			transform: scale(1.6);
+			transition: all 0.6s ease-in-out;
+		}
+	}
+}
+
+
+.prices__individual {
+	margin-top: 116px;
+	font-style: italic;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 30px;
+	display: inline-block;
+	width: 80%;
+	text-align: left;
+	align-self: flex-start;
+	&_red {
+		{text-gradient};
+		padding-right: 10px;
+
+	}
+}
+
+
+.type .advantages .section__headings {
+	align-items: flex-start;
+}
+
+.type .howto {
+	padding-top: 160px;
+}
+
+.type__header .contacts__image span {
+	font-size: 26px;
+	font-weight: 700;
 }
