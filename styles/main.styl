@@ -1454,3 +1454,78 @@ html, body {
 	width: 60%;
 	line-height: 1.4;
 }
+
+.feedback {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-bottom: 160px;
+}
+
+.feedback__list {
+	display: flex;
+	width: 45%;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.feedback__item {
+	padding: 70px 60px;
+	width: 100%;
+	{border-gradient};
+
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 45px;
+		right: -9px;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: $gradient;
+		transition: top 0.4s ease-in-out;
+	}
+
+	&:hover, &:focus {
+		&::after {
+			top: 80px;
+			transition: top 0.4s ease-in-out;
+		}
+	}
+
+
+
+	&:not(:last-child) {
+		margin-bottom: 55px;
+	}
+}
+
+.feedback__name {
+	font-weight: 700;
+	font-size: 26px;
+	margin-bottom: 40px;
+}
+
+.feedback__text {
+	padding-left: 40px;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 140%;
+}
+
+.feedback__heading {
+	margin-top: 55px;
+	margin-bottom: 75px;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 49px;
+	text-align: right;
+
+	&_red {
+		{text-gradient};
+	}
+}
