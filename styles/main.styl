@@ -1193,3 +1193,79 @@ html, body {
 	right: 20px;
 
 }
+
+
+.type__heading_h1 {
+	font-weight: 800;
+	font-size: 120px;
+	line-height: 146px;
+	margin-bottom: 85px;
+}
+
+.type__header {
+	background: none;
+	height: auto;
+}
+
+.type__text {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 175px;
+}
+
+.type__heading_h2, .type__description {
+	width: 50%;
+}
+
+.type__heading_h2 {
+	padding-left: 85px;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 49px;
+}
+
+.type__description {
+	padding-right: 85px;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 140%;
+}
+
+.type__contacts {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding-left: 85px;
+	padding-right: 85px;
+	margin-bottom: 120px;
+	& figure.contacts__item, .contacts__item figure {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 0;
+		//width: 20%;
+	}
+
+	a.contacts__item {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+		text-decoration: none;
+		color: $black;
+		margin-bottom: 0;
+
+		&:hover, &:focus {
+			{text-gradient};
+
+			& .contacts__image {
+				background: $gradient;
+			}
+		}
+	}
+
+}
