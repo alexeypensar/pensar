@@ -1318,6 +1318,7 @@ body {
   font-size: 120px;
   line-height: 146px;
   margin-bottom: 85px;
+  text-align: center;
 }
 .type__header {
   background: none;
@@ -1530,4 +1531,9 @@ body {
 .type__header .contacts__image span {
   font-size: 26px;
   font-weight: 700;
+}
+.type__heading_corporate {
+  font-size: 80px;
+  width: 60%;
+  line-height: 1.4;
 }
