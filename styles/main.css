@@ -324,12 +324,15 @@ body {
   font-size: 18px;
   color: #3d3d3d;
   text-decoration: none;
+  background: none;
+  transition: background 0.3s ease;
 }
 .header__link:hover,
 .header__link:focus {
   background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: background 0.3s ease;
 }
 .header__li_divider {
   width: 9px;
