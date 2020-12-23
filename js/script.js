@@ -27,6 +27,12 @@ hamburger.addEventListener('click', function () {
     mainNavigation.classList.toggle('main-navigation_active');
     shadow.classList.toggle('main-navigation__shadow_active');
 });
+
+shadow.addEventListener('click', function () {
+    mainNavigation.classList.toggle('main-navigation_active');
+    shadow.classList.toggle('main-navigation__shadow_active');
+});
+
 mainNavigationClose.addEventListener('click', function () {
     mainNavigation.classList.toggle('main-navigation_active');
     shadow.classList.toggle('main-navigation__shadow_active');
