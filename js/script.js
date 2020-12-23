@@ -10,7 +10,6 @@
 // });
 
 
-
 // document.addEventListener('mouseup', function(e) {
 //     // var container = $("YOUR CONTAINER SELECTOR");
 //     if (submenu.has(e.target).length === 0){
@@ -18,13 +17,40 @@
 //     }
 // });
 
+
+const hamburger = document.getElementById('hamburger');
+const mainNavigation = document.getElementById('mainNavigation');
+const shadow = document.getElementById('shadow');
+const mainNavigationClose = document.getElementById('mainNavigationClose');
+
+hamburger.addEventListener('click', function () {
+    mainNavigation.classList.toggle('main-navigation_active');
+    shadow.classList.toggle('main-navigation__shadow_active');
+});
+mainNavigationClose.addEventListener('click', function () {
+    mainNavigation.classList.toggle('main-navigation_active');
+    shadow.classList.toggle('main-navigation__shadow_active');
+});
+
+const mainMenuLinks = Array.from(document.getElementsByClassName('main-navigation__link'));
+mainMenuLinks.forEach(function (el) {
+    el.addEventListener('click', function () {
+        mainNavigation.classList.toggle('main-navigation_active');
+        shadow.classList.toggle('main-navigation__shadow_active');
+    });
+});
+
+
+
+
+
 let faqList = document.getElementsByClassName('faq__item');
 
-for(let i = 0; i < faqList.length; i++) {
+for (let i = 0; i < faqList.length; i++) {
     let question = faqList[i].firstElementChild;
     let answer = faqList[i].lastElementChild;
     let block = faqList[i];
-    question.addEventListener('click', function(el) {
+    question.addEventListener('click', function (el) {
         el.preventDefault();
         block.classList.toggle('faq__item_opened')
         answer.classList.toggle('faq__answer_opened');
@@ -32,14 +58,12 @@ for(let i = 0; i < faqList.length; i++) {
 }
 
 
-
-
 // функция для блоков "портфолио" и "схема работы"
 
-let switcher = function(prevButton, nextButton, elementsArray, heading, text, imageSrc) {
+let switcher = function (prevButton, nextButton, elementsArray, heading, text, imageSrc) {
     let counter = 0;
 
-    nextButton.addEventListener('click', function() {
+    nextButton.addEventListener('click', function () {
         nextButton.firstElementChild.style.transform = 'scale(1)';
         counter++;
         prevButton.removeAttribute('disabled');
@@ -49,50 +73,47 @@ let switcher = function(prevButton, nextButton, elementsArray, heading, text, im
         heading.innerHTML = elementsArray[counter].heading;
         text.innerHTML = elementsArray[counter].text;
 
-        if(imageSrc === null) {
+        if (imageSrc === null) {
             return null;
-        }
-        else {
+        } else {
             imageSrc.setAttribute('src', elementsArray[counter].imageSrc);
         }
 
-        
+
     });
 
-    prevButton.addEventListener('click', function() {
+    prevButton.addEventListener('click', function () {
         prevButton.firstElementChild.style.transform = 'scale(1)';
         counter--;
         nextButton.removeAttribute('disabled');
         if (counter === 0) {
             prevButton.setAttribute('disabled', 'disabled');
         }
-        
+
         heading.innerHTML = elementsArray[counter].heading;
         text.innerHTML = elementsArray[counter].text;
-        if(imageSrc === null) {
+        if (imageSrc === null) {
             return null;
-        }
-        else {
+        } else {
             imageSrc.setAttribute('src', elementsArray[counter].imageSrc);
         }
     });
 
 
-    prevButton.addEventListener('mouseover', function() {
+    prevButton.addEventListener('mouseover', function () {
         prevButton.firstElementChild.style.transform = 'scale(2)';
     });
 
-    prevButton.addEventListener('mouseout', function() {
+    prevButton.addEventListener('mouseout', function () {
         prevButton.firstElementChild.style.transform = 'scale(1)';
     })
-    nextButton.addEventListener('mouseover', function() {
+    nextButton.addEventListener('mouseover', function () {
         nextButton.firstElementChild.style.transform = 'scale(2)';
     });
-    nextButton.addEventListener('mouseout', function() {
+    nextButton.addEventListener('mouseout', function () {
         nextButton.firstElementChild.style.transform = 'scale(1)';
     })
 
-    
 
 };
 
@@ -152,8 +173,6 @@ pHeading.innerHTML = portfolioElements[0].heading;
 pText.innerHTML = portfolioElements[0].text;
 pImage.setAttribute('src', portfolioElements[0].imageSrc);
 pButtonPrev.setAttribute('disabled', 'disabled');
-
-
 
 
 // настройки для блока "схема работы":
