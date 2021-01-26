@@ -1080,7 +1080,7 @@ body {
   height: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   background-color: transparent;
   border: 2px solid;
