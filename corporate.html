@@ -57,8 +57,12 @@
             <li class="header__li"><a class="header__link" href="">Контакты</a></li>
         </ul>
         <!--            todo кнопку меню выровнять по вертикали-->
-        <button class="header__menu-button">
-            <img src="img/icons/header-burger.svg" alt="">
+        <button class="header__menu-button" id="hamburger">
+            <svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.5 2.5C0.5 1.83696 0.763392 1.20107 1.23223 0.732234C1.70107 0.263393 2.33696 0 3 0H33C33.663 0 34.2989 0.263393 34.7678 0.732234C35.2366 1.20107 35.5 1.83696 35.5 2.5C35.5 3.16304 35.2366 3.79893 34.7678 4.26777C34.2989 4.73661 33.663 5 33 5H3C2.33696 5 1.70107 4.73661 1.23223 4.26777C0.763392 3.79893 0.5 3.16304 0.5 2.5ZM0.5 15C0.5 14.337 0.763392 13.7011 1.23223 13.2322C1.70107 12.7634 2.33696 12.5 3 12.5H33C33.663 12.5 34.2989 12.7634 34.7678 13.2322C35.2366 13.7011 35.5 14.337 35.5 15C35.5 15.663 35.2366 16.2989 34.7678 16.7678C34.2989 17.2366 33.663 17.5 33 17.5H3C2.33696 17.5 1.70107 17.2366 1.23223 16.7678C0.763392 16.2989 0.5 15.663 0.5 15ZM15.5 27.5C15.5 26.837 15.7634 26.2011 16.2322 25.7322C16.7011 25.2634 17.337 25 18 25H33C33.663 25 34.2989 25.2634 34.7678 25.7322C35.2366 26.2011 35.5 26.837 35.5 27.5C35.5 28.163 35.2366 28.7989 34.7678 29.2678C34.2989 29.7366 33.663 30 33 30H18C17.337 30 16.7011 29.7366 16.2322 29.2678C15.7634 28.7989 15.5 28.163 15.5 27.5Z"
+                      fill="#3D3D3D"/>
+            </svg>
         </button>
 
     </nav>
@@ -112,6 +116,60 @@
     </section>
 
 </header>
+
+<div class="main-navigation__shadow" id="shadow"></div>
+
+<nav class="main-navigation" id="mainNavigation">
+    <button class="main-navigation__button" type="button" id="mainNavigationClose"></button>
+    <ul class="main-navigation__list">
+        <li class="main-navigation__item main-navigation__item_logo">pensar.</li>
+        <li class="main-navigation__item">Цены и услуги
+            <ul class="main-navigation__sublist">
+                <li class="main-navigation__subitem">
+                    <a href="" class="main-navigation__link main-navigation__link_small">Лендинг</a>
+                </li>
+                <li class="main-navigation__subitem">
+                    <a href="" class="main-navigation__link main-navigation__link_small">Многостраничный
+                        сайт</a></li>
+                <li class="main-navigation__subitem">
+                    <a href="" class="main-navigation__link main-navigation__link_small">Интернет-магазин</a>
+                </li>
+            </ul>
+        </li>
+        <li class="main-navigation__item"><a href="#portfolioBlock" class="main-navigation__link">Проекты</a></li>
+        <li class="main-navigation__item"><a href="#" class="main-navigation__link">Отзывы</a></li>
+        <li class="main-navigation__item"><a href="#" class="main-navigation__link">Вопрос-ответ</a></li>
+        <li class="main-navigation__item"><a href="#" class="main-navigation__link">Контакты</a></li>
+        <li class="main-navigation__item main-navigation__item_icons">
+            <a href="#" class="main-navigation__link main-navigation__link_contacts">
+                <span class="main-navigation__image">
+                    <img src="img/icons/contacts-phone.svg" alt="">
+                </span> +7 913 900-77-88
+            </a>
+        </li>
+        <li class="main-navigation__item">
+            <a href="#" class="main-navigation__link main-navigation__link_contacts">
+                <span class="main-navigation__image">
+                    <img src="img/icons/contacts-mail.svg" alt="">
+                </span> info@pensar.ru
+            </a>
+        </li>
+        <li class="main-navigation__item">
+            <a href="#" class="main-navigation__link main-navigation__link_contacts">
+                <span class="main-navigation__image">
+                    <img src="img/icons/contacts-telegram.svg" alt="">
+                </span> telegram
+            </a>
+        </li>
+        <li class="main-navigation__item">
+            <a href="#" class="main-navigation__link main-navigation__link_contacts">
+                <span class="main-navigation__image">
+                    <img src="img/icons/contacts-whatsapp.svg" alt="">
+                </span> whatsapp
+            </a>
+        </li>
+    </ul>
+</nav>
 
 <main class="type">
 
@@ -250,9 +308,6 @@
                     <h4 class="portfolio__heading" id="pHeading"></h4>
                     <p class="portfolio__text" id="pText"></p>
 
-                    <!-- Одностраничные сайты идеально подойдут для презентации компании,
-                        запуска нового продукта или услуги. Стоимость разработки такого сайта начинается от 18 500
-                        рублей, срок от 7 дней. -->
 
                     <a class="portfolio__link portfolio__link_bottom" href="#">Перейти
                         <img src="img/icons/button-arrow.svg" alt="">
