@@ -1,0 +1,44 @@
+/* manrope-600 - latin_cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  src: url("manrope-v8-latin_cyrillic-600.eot"); /* IE9 Compat Modes */
+  src: local(''), url("manrope-v8-latin_cyrillic-600.eot?#iefix") format('embedded-opentype'), url("manrope-v8-latin_cyrillic-600.woff2") format('woff2'), url("manrope-v8-latin_cyrillic-600.woff") format('woff'), url("manrope-v8-latin_cyrillic-600.ttf") format('truetype'), url("manrope-v8-latin_cyrillic-600.svg#Manrope") format('svg'); /* Legacy iOS */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #d3d3d3;
+}
+.main-link:first-child {
+  margin-bottom: 40px;
+}
+.main-link {
+  width: 296px;
+  height: 60px;
+  text-decoration: none;
+  background-color: #486bb1;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Manrope';
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.main-link svg {
+  margin-left: 13px;
+}
+.main-link:hover svg,
+.main-link:focus svg {
+  transform: translateX(7px) rotate(360deg);
+  transition: transform 1s ease-in-out;
+}
