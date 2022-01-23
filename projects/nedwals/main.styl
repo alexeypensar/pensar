@@ -63,6 +63,8 @@ body {
 
   & svg {
     margin-left: 13px;
+    transform: translateX(0) rotate(0deg);
+    transition: transform 0.75s ease-in-out;
   }
 
   &:hover, &:focus {
@@ -70,9 +72,10 @@ body {
       //animation-name: screw;
       //animation-duration: 1s;
       //animation-timing-function: ease-in-out;
-      transform: translateX(7px) rotate(360deg);
+      transform: translateX(7px) rotate(160deg);
       //transform: translateX(5px);
-      transition: transform 1s ease-in-out;
+      transition: transform 0.75s ease-in-out;
+
     }
   }
 }

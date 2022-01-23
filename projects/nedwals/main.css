@@ -36,9 +36,11 @@ body {
 }
 .main-link svg {
   margin-left: 13px;
+  transform: translateX(0) rotate(0deg);
+  transition: transform 0.75s ease-in-out;
 }
 .main-link:hover svg,
 .main-link:focus svg {
-  transform: translateX(7px) rotate(360deg);
-  transition: transform 1s ease-in-out;
+  transform: translateX(7px) rotate(160deg);
+  transition: transform 0.75s ease-in-out;
 }
