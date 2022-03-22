@@ -1,0 +1,80 @@
+@import 'reset.css';
+@import '__fonts.styl';
+@import '__variables.styl';
+@import '__helpers.styl';
+@import '__animations.styl';
+@import '__adaptive.styl';
+
+html {
+	scroll-behavior: smooth;
+}
+
+
+html, body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+
+}
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+//h1 {
+//	font-family: 'Playfair Display';
+//}
+
+body {
+	height: 3000px;
+}
+
+header {
+	height: 1200px;
+}
+.scene {
+	position: absolute;
+	width: 100%;
+	transform: translateY(var(--translateY));
+	will-change: transform;
+	&:nth-child(1) {
+		top: -350px;
+	}
+	&:nth-child(3) {
+		top: 400px;
+	}
+}
+
+.h1 {
+	top: 170px;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	font-size: 120px;
+	line-height: 120%;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+
+	opacity: 0.9;
+
+
+}
+
+span {
+	font-family: 'Playfair Display';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 60px;
+	line-height: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	opacity: 0.9;
+	top: 500px;
+}
