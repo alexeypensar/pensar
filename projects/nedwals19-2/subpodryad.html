@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nedwal's - субподрядные работы</title>
+
+    <!--цвет вкладки в chrome-->
+    <meta name="theme-color" content="#9CC2CE">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+
+</head>
+<body>
+
+<header class="header container">
+
+    <section class="header__top">
+        <a href="#" class="header__logo"><img src="img/logo.png" alt="Nedwal's"></a>
+        <a href="#" class="header__location"><img src="img/icons/location.svg" alt="отметка на карте">г. Новосибирск,
+            Станционная 60/1, корп. 2/4</a>
+
+        <form class="header__form" action="search.php">
+            <input class="header__search" type="text" placeholder="Поиск">
+        </form>
+        <a class="header__mail link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>
+        <a class="header__phone link-hover link-hover_static" href="tel:+73832844440">+7 383 284-44-40</a>
+
+        <button class="mobile-menu__button" id="mobileMenuButton"><span></span></button>
+
+    </section>
+
+    <nav class="header__nav" id="headerNav">
+        <ul class="header__list">
+            <li class="header__item_hidden">
+                <button class="mobile-menu__close" id="mobileMenuCloseButton"><span></span></button>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">О компании</a>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">Объекты</a>
+            </li>
+            <li class="header__item header__item_drop">
+                <span class="header__link header__link_arrow mobile__link_arrow">Продукция</span>
+                <ul class="header__sublist">
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Болты</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Винты</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Гайки</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Заклепки</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Пружины</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Хомуты</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__item header__item_drop">
+                <span class="header__link header__link_arrow mobile__link_arrow">Услуги</span>
+                <ul class="header__sublist">
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Накатка резьбы</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Полимерное покрытие</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Рубка металла</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Термообработка</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Токарные работы</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Цинкование</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">Новости</a>
+            </li>
+            <li class="header__item header__item_drop">
+                <span class="header__link header__link_arrow mobile__link_arrow">Калькулятор</span>
+                <ul class="header__sublist">
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Калькулятор метизов</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Калькулятор металла</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">Контакты</a>
+            </li>
+            <li class="header__item">
+                <a href="#order" class="header__button main-button" id="headerOrderButton">Оформить заказ <img src="img/icons/screw-white.svg" alt="">
+                </a>
+            </li>
+
+            <li class="header__item_mobile">
+
+                <a href="#" class="header__location"><img src="img/icons/location-white.svg" alt="отметка на карте">г.
+                    Новосибирск,
+                    Станционная 60/1, корп. 2/4</a>
+            </li>
+            <li class="header__item_mobile">
+                <form class="header__form" action="search.php">
+                    <input class="header__search" type="text" placeholder="Поиск">
+                </form>
+            </li>
+
+            <li class="header__item_mobile">
+                <a class="header__mail link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>
+            </li>
+
+            <li class="header__item_mobile">
+                <a class="header__phone link-hover link-hover_static" href="tel:+73832844440">+7 383 284-44-40</a>
+            </li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<main>
+
+    <section class="banner-interior__wrapper container">
+        <article class="banner-interior banner-interior_subpodryad">
+            <h1 class="banner-interior__heading">Субподрядные работы</h1>
+            <p class="banner-interior__text">Комплектация объектов строительства металлоизделиями и
+                металлоконструкциями</p>
+
+        </article>
+
+
+    </section>
+
+    <section class="breadcrumbs container">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <a class="breadcrumbs__link" href="#">Субподрядные работы</a>
+
+    </section>
+
+    <section class="subpodryad__wrapper">
+        <div class="subpodryad container">
+            <h2 class="subpodryad__heading">
+                Производство и монтаж металлоконструкций<br>
+                для объектов строительства
+
+            </h2>
+            <p class="subpodryad__text">
+                Ограждения балконов, лестничные марши, пожарные лестницы, леерные ограждения, заборы, закладные изделия.
+                производство и монтаж любых металлических изделий для ваших объектов строительства.
+                Комплексное сотрудничество со строительными организациями
+                Большой штат монтажных бригад, способных выполнить любую поставленную задачу.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="subpodryad-items container">
+        <article class="subpodryad-items__item">
+            <div class="subpodryad-items__item_left">
+                <h3 class="subpodryad-items__heading">
+                    Ограждения балконов
+                </h3>
+                <img src="img/products/subpodryad/1.jpg" alt="">
+            </div>
+            <p class="subpodryad-items__description">
+                Для современных жилых домов мы применяем новую технологи «ИНТЕГРИРОВАННЫЕ БАЛКОННЫЕ ОГРАЖДЕНИЯ» — это
+                значительно удешевляет стоимость металлоконструкций при строительстве дома.
+                Особое внимание мы уделяем качеству сварного шва и его последующей зачистке. Наши ограждения всегда
+                крепкие и надежные.
+                Покраска балконных ограждений осуществляется только полимерным окрашиванием.
+                Широкая гамма цветов позволяет подобрать именно тот цвет ограждений, который подойдет к фасаду Вашего
+                дома.
+                В большинстве случаев мы заканчиваем монтаж ограждений с опережением установленных сроков.
+                Гарантия качества сварочных работ.
+            </p>
+        </article>
+
+        <article class="subpodryad-items__item">
+            <div class="subpodryad-items__item_left">
+                <h3 class="subpodryad-items__heading">
+                    Лестничные марши
+                </h3>
+                <img src="img/products/subpodryad/2.jpg" alt="">
+            </div>
+            <p class="subpodryad-items__description">
+                Виды ограждения для лестниц:
+                Наиболее распространенными считаются ограждения из стали с ригелями. Их популярность основана на их
+                стоимости, в этом варианте цена лестничных ограждений считается самой низкой. Ограждений с ригелями
+                делятся по типам в зависимости от количества используемых ригелей: перила с одним, двумя, тремя,
+                четырьмя и так далее ригелями. Ригель это перекладина, которая крепится к стойкам лестничных ограждений,
+                она создает дополнительное защиту, а так же формирует прочную конструкцию перил. Помимо укрепления
+                ригели придают лестничным ограждениям декоративный, которые делают конструкцию элегантной и завершенной.
+            </p>
+        </article>
+
+        <article class="subpodryad-items__item">
+            <div class="subpodryad-items__item_left">
+                <h3 class="subpodryad-items__heading">
+                    Пожарные лестницы
+                </h3>
+                <img src="img/products/subpodryad/3.jpg" alt="">
+            </div>
+            <p class="subpodryad-items__description">
+                Вся наша продукция соответствует ФЗ-123, ГОСТ 25772-83, ГОСТ Р 53254—2009, СНиП 21-01-97, сертификаты
+                соответствия и протоколы испытаний.
+                1. ГОСТ 25772-83 «Ограждения лестниц, балконов и крыш стальные»
+                2. СНиП 21-01-97 «Пожарная безопасность зданий и сооружений»
+                3. СНиП 2.01.02-85 «Производственные здания»
+                3. СП 54.13330.2011 СНиП 31-01-2003 «Здания жилые многоквартирные»
+                4. СНиП 31-05-2003 «Общественные здания административного назначения»
+            </p>
+        </article>
+
+        <article class="subpodryad-items__item">
+            <div class="subpodryad-items__item_left">
+                <h3 class="subpodryad-items__heading">
+                    Леерные ограждения
+                </h3>
+                <img src="img/products/subpodryad/4.jpg" alt="">
+            </div>
+            <p class="subpodryad-items__description">
+                Леерные ограждения и ограждения кровли.
+                Кровельные ограды на черепице и других покрытиях домовых крыш – обязательный атрибут при скатных крышах,
+                но используются они и на плоских вариантах кровли. Среди функций этих конструкций: обеспечение
+                безопасности – защищают жильцов от схождения льда и снега, улучшение внешнего вида – придают зданиям с
+                плоскими покрытиями законченную форму; защита от обрушения элементов, установленных на крыше.
+                Применение ограждений для кровли по ГОСТу требуется в таких случаях, как: высота зданий от 10 м, карниз
+                от 7 до 10 м, уклон кровли больше 6,8 градусов, плоские крыши, наличие открытых площадок и лестниц.
+            </p>
+        </article>
+
+        <article class="subpodryad-items__item">
+            <div class="subpodryad-items__item_left">
+                <h3 class="subpodryad-items__heading">
+                    Ограждения придомовой территории (заборы)
+                </h3>
+                <img src="img/products/subpodryad/5.jpg" alt="">
+            </div>
+            <p class="subpodryad-items__description">
+                Изготовим металлические ограждения любого типа и размера по стандартному проекту или чертежам заказчика.
+                Секционные металлические ограждения изготавливаются из металлической трубы. Форма и конфигурация изделия
+                может быть абсолютно разной. Сварная металлическая секция очень прочная и выглядит достаточно
+                презентабельно. Оптимальными размерами секций является 2×3 м. Такой формат наиболее экономичен в плане
+                расходов на материалы. Монтаж металлических ограждений осуществляется с учетом специфики грунта и
+                ландшафта.
+            </p>
+        </article>
+
+        <article class="subpodryad-items__item">
+            <div class="subpodryad-items__item_left">
+                <h3 class="subpodryad-items__heading">
+                    Металлокаркасные конструкции
+                </h3>
+                <img src="img/products/subpodryad/6.jpg" alt="">
+            </div>
+            <p class="subpodryad-items__description">
+                Все быстровозводимые сооружения на основе металлического каркаса являются энергоэффективными,
+                высокопрочными, сейсмически устойчивыми — данные характеристики и определяют главные особенности такого
+                дома. При любых погодных условиях металлокаркасная конструкция сохраняет свою геометрию. Поэтому для
+                создания и разработки проекта необходимо только указать высоту будущего сооружения.
+                Качество полученного сооружения тесно связано с материалами, которые применялись при изготовлении,
+                поэтому мы используем марки стали только в соответствии с ГОСТ и СНиП.
+            </p>
+        </article>
+    </section>
+
+    <section class="zakladnye__wrapper">
+        <div class="zakladnye container">
+            <h2 class="zakladnye__heading">
+                Закладные изделия
+            </h2>
+            <p class="zakladnye__description">
+                Мы производим все марки и типы закладных изделий.<br>
+                Изготавливаем как по ГОСТ так и по индивидуальным чертежам заказчиков.
+            </p>
+
+            <div class="zakladnye__items">
+                <article class="zakladnye__item">
+                    <h3 class="zakladnye__name">
+                        Закладные изделия<br>
+                        Серия 1.400-15<br>
+                        выпуск 1<br>
+                        МН 124-4<br>
+                    </h3>
+                    <img src="img/products/subpodryad/zakladnye/1.jpg" alt="">
+                </article>
+
+                <article class="zakladnye__item">
+                    <h3 class="zakladnye__name">
+                        Закладные изделия<br>
+                        Серия 1.400-15<br>
+                        выпуск 1<br>
+                        МН 520<br>
+                    </h3>
+                    <img src="img/products/subpodryad/zakladnye/2.jpg" alt="">
+                </article>
+
+                <article class="zakladnye__item">
+                    <h3 class="zakladnye__name">
+                        Закладные изделия<br>
+                        Серия 1.400-6/76<br>
+                        выпуск 1<br>
+                        МН 614<br>
+                    </h3>
+                    <img src="img/products/subpodryad/zakladnye/3.jpg" alt="">
+                </article>
+
+                <article class="zakladnye__item">
+                    <h3 class="zakladnye__name">
+                        Закладные изделия<br>
+                        Серия 1.400-6/76<br>
+                        выпуск 1<br>
+                        МН 570<br>
+                    </h3>
+                    <img src="img/products/subpodryad/zakladnye/4.jpg" alt="">
+                </article>
+
+                <article class="zakladnye__item">
+                    <h3 class="zakladnye__name">
+                        Закладные изделия<br>
+                        Серия 1.400-6/76<br>
+                        выпуск 1<br>
+                        МН 736-1<br>
+                    </h3>
+                    <img src="img/products/subpodryad/zakladnye/5.jpg" alt="">
+                </article>
+
+                <article class="zakladnye__item">
+                    <h3 class="zakladnye__name">
+                        Закладные изделия<br>
+                        по чертежам<br>
+                        заказчика
+                    </h3>
+                    <img src="img/products/subpodryad/zakladnye/6.jpg" alt="">
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="tender container">
+        <p class="tender__text">Пригласить нас для участия в тендере можно отправив письмо на e-mail: <a class="tender__link link-hover" href="mailto:for-tender@nedwals.ru">for-tender@nedwals.ru</a></p>
+        <p class="tender__text">Заказать расчет стоимости вашего проекта вы можете:<br>
+            по телефону: <a class="tender__link link-hover link-hover__static" href="tel:+73832844440">+7 (383) 284-44-40</a><br>
+            или по e-mail: <a class="tender__link link-hover link-hover__static" href="mailto:sales-dp2@nedwals.ru">sales-dp2@nedwals.ru</a></p>
+        <p class="tender__text">Также вы можете заполнить форму ниже и наши менеджеры сами свяжутся с вами.</p>
+    </section>
+
+    <section class="order__wrapper order__wrapper_blue">
+        <div class="order container">
+            <h2 class="section__heading section__heading_white">
+                Оформить заказ
+            </h2>
+
+            <form class="order__form" action="order.php">
+
+                <p class="order__information">Для размещения заявки свяжитесь с нами по телефону: <a
+                        class="link-hover link-hover_static"
+                        href="tel:+73832844400">+7 (383) 284 44 40</a>. Заявку можно отправить <br>на
+                    <a class="link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>, либо
+                    заполните форму для расчёта стоимости изделия.</p>
+                <textarea class="order__textarea" name="orderInformation" id="orderInformation" cols="30"
+                          rows="10" placeholder="Информация об изделии"></textarea>
+                <div class="order__form_right">
+                    <input class="order__input" type="text" placeholder="Ваше имя">
+                    <input class="order__input" type="text" placeholder="Ваш e-mail">
+                    <input class="order__input" type="tel" placeholder="Ваш телефон">
+                    <label class="order__label" for="orderAddFile">Прикрепите файл (чертёж, схема...)</label>
+                    <div class="order__addfiles">
+
+                        <button class="order__addfile" id="orderAddFile">Выберите файл <img src="img/icons/addfile.svg"
+                                                                                            alt=""></button>
+                        <button class="main-button" type="submit">Отправить заказ <img src="img/icons/screw-white.svg"
+                                                                                       alt=""></button>
+
+                    </div>
+                    <div>
+                        <input id="orderCheckbox" type="checkbox" checked>
+                        <label class="order__label" for="orderCheckbox">Согласен с <a class="label__link" href="#">условиями
+                            обработки персональных
+                            данных</a></label>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+</main>
+
+<footer class="footer__wrapper">
+    <section class="footer container">
+
+        <a href="#" class="footer__logo">
+            <img src="img/footer-logo.png" alt="">
+        </a>
+
+        <nav class="footer__nav">
+            <ul class="footer__links">
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">О компании</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Объекты</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Продукция</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Услуги</a>
+                </li>
+            </ul>
+
+            <ul class="footer__links">
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Новости</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Калькулятор</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Контакты</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="footer__contacts">
+            <a href="tel:+73832844440" class="footer__phone link-hover link-hover_static">+7 383 284-44-40</a>
+            <address>Новосибирск, Станционная 60/1, к. 2/4</address>
+            <a class="link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>
+            <div class="footer__social">
+                <a href="#">
+                    <img src="img/icons/vk.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/icons/instagram.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <p class="footer__copyright">&#169; 2021. Nedwals - Производство нестандартного высокопрочного крепежа и
+            металлокаркасных конструкций в Новосибирске.</p>
+
+    </section>
+
+
+</footer>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+    const swiperMain = new Swiper('.main-carousel', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        spaceBetween: 30
+
+    });
+
+    const swiperProjects = new Swiper('.projects__carousel', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        spaceBetween: 54,
+        width: 986,
+        slideActiveClass: 'projects__item_active'
+
+    });
+
+    const swiperEquipment = new Swiper('.equipment__carousel', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        // spaceBetween: 40,
+        slidesPerView: 7,
+        slideActiveClass: 'equipment__item_active'
+
+    });
+
+    const swiperReviews = new Swiper('.reviews__carousel', {
+        loop: true,
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // },
+        spaceBetween: 30,
+        slidesPerView: 3
+        // slideActiveClass: 'equipment__item_active'
+
+    });
+
+</script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
