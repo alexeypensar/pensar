@@ -1,0 +1,93 @@
+// класс .visually-hidden для стилизации чекбоксов и радио-кнопок
+
+.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	white-space: nowrap;
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+	overflow: hidden;
+}
+
+.section__heading {
+	font-weight: 600;
+	font-size: 42px;
+	line-height: 57px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+
+	&_white {
+		color: #FFFFFF;
+	}
+}
+
+
+
+.main-button {
+	width: 249px;
+	height: 65px;
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 18px;
+	text-transform: uppercase;
+	background-color: $color-blue;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border: none;
+	padding: 20px 28px;
+	position: relative;
+	text-decoration: none;
+
+	& img {
+		transform: translateX(0) rotate(0);
+		transition: transform 1.2s ease-in-out;
+	}
+
+
+
+
+	&_transparent {
+		color: #FFFFFF;
+		border: 1px solid $color-blue;
+		background-color: transparent;
+
+		&:hover, &:focus {
+			border: 1px solid #FFFFFF;
+			transition: all 1.2s ease-in-out;
+		}
+	}
+
+	&_white {
+		border: 1px solid #FFFFFF;
+		background-color: transparent;
+	}
+
+	&_blue {
+		border: 1px solid $color-blue;
+		background-color: transparent;
+		color: $color-blue;
+		width: 260px;
+	}
+
+	&:hover, &:focus {
+		cursor: pointer;
+
+
+		& img {
+			//right: 23px;
+			transform: translateX(5px) rotate(360deg);
+			transition: transform 1.2s ease-in-out;
+
+		}
+
+	}
+
+
+}
+
