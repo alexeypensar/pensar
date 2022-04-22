@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nedwal's - сварочный цех</title>
+
+    <!--цвет вкладки в chrome-->
+    <meta name="theme-color" content="#9CC2CE">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+
+</head>
+<body>
+
+<header class="header container">
+
+    <section class="header__top">
+        <a href="#" class="header__logo"><img src="img/logo.png" alt="Nedwal's"></a>
+        <a href="#" class="header__location"><img src="img/icons/location.svg" alt="отметка на карте">г. Новосибирск,
+            Станционная 60/1, корп. 2/4</a>
+
+        <form class="header__form" action="search.php">
+            <input class="header__search" type="text" placeholder="Поиск">
+        </form>
+        <a class="header__mail link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>
+        <a class="header__phone link-hover link-hover_static" href="tel:+73832844440">+7 383 284-44-40</a>
+
+        <button class="mobile-menu__button" id="mobileMenuButton"><span></span></button>
+
+    </section>
+
+    <nav class="header__nav" id="headerNav">
+        <ul class="header__list">
+            <li class="header__item_hidden">
+                <button class="mobile-menu__close" id="mobileMenuCloseButton"><span></span></button>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">О компании</a>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">Объекты</a>
+            </li>
+            <li class="header__item header__item_drop">
+                <span class="header__link header__link_arrow mobile__link_arrow">Продукция</span>
+                <ul class="header__sublist">
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Болты</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Винты</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Гайки</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Заклепки</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Пружины</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Хомуты</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__item header__item_drop">
+                <span class="header__link header__link_arrow mobile__link_arrow">Услуги</span>
+                <ul class="header__sublist">
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Накатка резьбы</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Полимерное покрытие</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Рубка металла</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Термообработка</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Токарные работы</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Цинкование</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">Новости</a>
+            </li>
+            <li class="header__item header__item_drop">
+                <span class="header__link header__link_arrow mobile__link_arrow">Калькулятор</span>
+                <ul class="header__sublist">
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Калькулятор метизов</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Калькулятор металла</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">Контакты</a>
+            </li>
+            <li class="header__item">
+                <a href="#order" class="header__button main-button" id="headerOrderButton">Оформить заказ <img src="img/icons/screw-white.svg" alt="">
+                </a>
+            </li>
+
+            <li class="header__item_mobile">
+
+                <a href="#" class="header__location"><img src="img/icons/location-white.svg" alt="отметка на карте">г.
+                    Новосибирск,
+                    Станционная 60/1, корп. 2/4</a>
+            </li>
+            <li class="header__item_mobile">
+                <form class="header__form" action="search.php">
+                    <input class="header__search" type="text" placeholder="Поиск">
+                </form>
+            </li>
+
+            <li class="header__item_mobile">
+                <a class="header__mail link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>
+            </li>
+
+            <li class="header__item_mobile">
+                <a class="header__phone link-hover link-hover_static" href="tel:+73832844440">+7 383 284-44-40</a>
+            </li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<main>
+
+    <section class="banner-interior__wrapper container">
+        <article class="banner-interior banner-interior_svarka">
+            <h1 class="banner-interior__heading">Сварочный<br>цех</h1>
+            <p class="banner-interior__text">Парковочные столбики,<br>
+                отбойники защитные,<br>
+                колёсоотбойники</p>
+
+        </article>
+
+
+    </section>
+
+    <section class="breadcrumbs container">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <a class="breadcrumbs__link" href="#">Сварочный цех</a>
+
+    </section>
+
+    <section class="subpodryad__wrapper">
+        <div class="subpodryad container">
+            <h2 class="subpodryad__heading">
+                Производство парковочных столбиков, защитных отбойников, колёсоотбойников
+
+            </h2>
+            <p class="subpodryad__text">
+                Предлагаем вам парковочные столбики, колёсоотбойники, защитные отбойники.
+                Все характеристики могут быть изменены по желанию заказчика.
+            </p>
+
+            <h2 class="subpodryad__subheading">Парковочные столбики</h2>
+
+        </div>
+
+        <div class="zakladnye container">
+
+            <div class="zakladnye__items">
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Парковочный столбик ПС-76-1
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х1,5 мм<br>
+                            Анкерное основание: 100х100 мм<br>
+                            Пластиковая заглушка: плоская, черная<br>
+                            Крепление: на 4-х анкерных болтах М10<br>
+                            Высота: 750 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 2,3 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/stolbik/1.png" alt="">
+                </article>
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Парковочный столбик ПС-76-2
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х1,5 мм<br>
+                            Анкерное основание: 100х100 мм<br>
+                            Пластиковая заглушка: плоская, черная<br>
+                            Крепление: на 4-х анкерных болтах М10<br>
+                            Высота: 750 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 2,3 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/stolbik/2.png" alt="">
+                </article>
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Парковочный столбик ПС-76-3
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х1,5 мм<br>
+                            Пластиковая заглушка: полусферическая, черная<br>
+                            Крепление: на 4-х анкерных болтах М10<br>
+                            Высота: 750 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 2,8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/stolbik/3.png" alt="">
+                </article>
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Парковочный столбик ПС-76-4
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х1,5 мм<br>
+                            Пластиковая заглушка: полусферическая, черная<br>
+                            Крепление: бетонирование на глубину 250 мм<br>
+                            Высота: 750 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 2,8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/stolbik/4.png" alt="">
+                </article>
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Парковочный столбик ПС-76-5
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х1,5 мм<br>
+                            Крепление: бетонирование на глубину 250 мм<br>
+                            Высота: 750 мм + 250 мм (под бетонирование)<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 1 шт<br>
+                            Масса 1 шт: 3,3 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/stolbik/5.png" alt="">
+                </article>
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Парковочный столбик ПС-76-6
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х1,5 мм<br>
+                            Крепление: на 4-х анкерных болтах<br>
+                            Высота: 750 мм + 250 мм (под бетонирование)<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 1 шт<br>
+                            Масса 1 шт: 3,3 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/stolbik/6.png" alt="">
+                </article>
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Парковочный столбик ПС-76-7
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х1,5 мм<br>
+                            Крепление: на 4-х анкерных болтах<br>
+                            Высота: 750 мм + 250 мм (под бетонирование)<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 1 шт<br>
+                            Масса 1 шт: 3,3 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/stolbik/7.png" alt="">
+                </article>
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Парковочный столбик ПС-76-8
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х1,5 мм<br>
+                            Крепление: бетонирование на глубину 250 мм<br>
+                            Высота: 750 мм + 250 мм (под бетонирование)<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 1 шт<br>
+                            Масса 1 шт: 3,3 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/stolbik/8.png" alt="">
+                </article>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="kolesootboyniki container">
+        <h2 class="kolesootboyniki__heading">
+            Колёсоотбойники
+        </h2>
+
+        <div class="zakladnye__items">
+            <article class="zakladnye__item zakladnye__item_big">
+                <div class="stolbik__text">
+                    <h3 class="stolbik__name">
+                        Колёсоотбойник - 1
+                    </h3>
+                    <p class="stolbik__description">
+                        Диаметр трубы: 76х1,5 мм<br>
+                        Крепление: на 4-х анкерных болтах М10<br>
+                        Высота: 140 мм<br>
+                        Длина: 1000 мм<br>
+                        Покрытие: полимерное (порошковая краска)<br>
+                        Цвет: по желанию заказчика<br>
+                        Светоотражающие наклейки: 2 шт<br>
+                        Масса 1 шт: 4,2 кг
+                    </p>
+                </div>
+                <img class="stolbik__image" src="img/products/svarka/kolesootboynik/1.png" alt="">
+            </article>
+
+            <article class="zakladnye__item zakladnye__item_big">
+                <div class="stolbik__text">
+                    <h3 class="stolbik__name">
+                        Колёсоотбойник - 2
+                    </h3>
+                    <p class="stolbik__description">
+                        Диаметр трубы: 76х1,5 мм<br>
+                        Крепление: на 8-ми анкерных болтах М10<br>
+                        Высота: 140 мм<br>
+                        Длина: 1000 мм<br>
+                        Покрытие: полимерное (порошковая краска)<br>
+                        Цвет: по желанию заказчика<br>
+                        Светоотражающие наклейки: 2 шт<br>
+                        Масса 1 шт: 7,2 кг
+                    </p>
+                </div>
+                <img class="stolbik__image" src="img/products/svarka/kolesootboynik/2.png" alt="">
+            </article>
+
+            <article class="zakladnye__item zakladnye__item_big">
+                <div class="stolbik__text">
+                    <h3 class="stolbik__name">
+                        Колёсоотбойник - 3
+                    </h3>
+                    <p class="stolbik__description">
+                        Диаметр трубы: 76х1,5 мм<br>
+                        Крепление: на 8-ми анкерных болтах М10<br>
+                        Высота: 140 мм<br>
+                        Длина: 1000 мм<br>
+                        Покрытие: полимерное (порошковая краска)<br>
+                        Цвет: по желанию заказчика<br>
+                        Светоотражающие наклейки: 2 шт<br>
+                        Масса 1 шт: 7,2 кг
+                    </p>
+                </div>
+                <img class="stolbik__image" src="img/products/svarka/kolesootboynik/3.png" alt="">
+            </article>
+
+            <article class="zakladnye__item zakladnye__item_big">
+                <div class="stolbik__text">
+                    <h3 class="stolbik__name">
+                        Колёсоотбойник - 4
+                    </h3>
+                    <p class="stolbik__description">
+                        Диаметр трубы: 76х1,5 мм<br>
+                        Крепление: на 8-ми анкерных болтах М10<br>
+                        Высота: 140 мм<br>
+                        Длина: 1000 мм<br>
+                        Покрытие: полимерное (порошковая краска)<br>
+                        Цвет: по желанию заказчика<br>
+                        Светоотражающие наклейки: 2 шт<br>
+                        Масса 1 шт: 7,2 кг
+                    </p>
+                </div>
+                <img class="stolbik__image" src="img/products/svarka/kolesootboynik/4.png" alt="">
+            </article>
+
+            <article class="zakladnye__item zakladnye__item_big">
+                <div class="stolbik__text">
+                    <h3 class="stolbik__name">
+                        Колёсоотбойник - 5
+                    </h3>
+                    <p class="stolbik__description">
+                        Диаметр трубы: 76х1,5 мм<br>
+                        Крепление: на 4-х анкерных болтах М10<br>
+                        Высота: 140 мм<br>
+                        Длина: 1000 мм<br>
+                        Покрытие: полимерное (порошковая краска)<br>
+                        Цвет: по желанию заказчика<br>
+                        Светоотражающие наклейки: 2 шт<br>
+                        Масса 1 шт: 6 кг
+                    </p>
+                </div>
+                <img class="stolbik__image" src="img/products/svarka/kolesootboynik/5.png" alt="">
+            </article>
+
+        </div>
+    </section>
+
+
+    <section class="subpodryad__wrapper">
+        <div class="subpodryad container">
+
+            <h2 class="subpodryad__subheading otboyniki__heading">Защитные отбойники</h2>
+
+        </div>
+
+        <div class="zakladnye otboyniki container">
+
+            <div class="zakladnye__items">
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Защитный отбойник - 1
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х3 мм<br>
+                            Крепление: на 8-ми анкерных болтах М10<br>
+                            Высота: 140 мм<br>
+                            Длина: 500 х 500 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/otboynik/1.png" alt="">
+                </article>
+
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Защитный отбойник - 2
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х3 мм<br>
+                            Крепление: на 8-ми анкерных болтах М10<br>
+                            Высота: 140 мм<br>
+                            Длина: 500 х 500 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/otboynik/2.png" alt="">
+                </article>
+
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Защитный отбойник - 3
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х3 мм<br>
+                            Крепление: на 8-ми анкерных болтах М10<br>
+                            Высота: 140 мм<br>
+                            Длина: 500 х 500 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/otboynik/3.png" alt="">
+                </article>
+
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Защитный отбойник - 4
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х3 мм<br>
+                            Крепление: на 8-ми анкерных болтах М10<br>
+                            Высота: 140 мм<br>
+                            Длина: 500 х 500 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/otboynik/4.png" alt="">
+                </article>
+
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Защитный отбойник - 5
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х3 мм<br>
+                            Крепление: на 8-ми анкерных болтах М10<br>
+                            Высота: 140 мм<br>
+                            Длина: 500 х 500 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/otboynik/5.png" alt="">
+                </article>
+
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Защитный отбойник - 6
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х3 мм<br>
+                            Крепление: на 8-ми анкерных болтах М10<br>
+                            Высота: 140 мм<br>
+                            Длина: 500 х 500 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/otboynik/6.png" alt="">
+                </article>
+
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Защитный отбойник - 7
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х3 мм<br>
+                            Крепление: на 8-ми анкерных болтах М10<br>
+                            Высота: 140 мм<br>
+                            Длина: 500 х 500 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/otboynik/7.png" alt="">
+                </article>
+                <article class="zakladnye__item zakladnye__item_big">
+                    <div class="stolbik__text">
+                        <h3 class="stolbik__name">
+                            Защитный отбойник - 8
+                        </h3>
+                        <p class="stolbik__description">
+                            Диаметр трубы: 76х3 мм<br>
+                            Крепление: на 8-ми анкерных болтах М10<br>
+                            Высота: 140 мм<br>
+                            Длина: 500 х 500 мм<br>
+                            Покрытие: полимерное (порошковая краска)<br>
+                            Цвет: по желанию заказчика<br>
+                            Светоотражающие наклейки: 2 шт<br>
+                            Масса 1 шт: 8 кг
+                        </p>
+                    </div>
+                    <img class="stolbik__image" src="img/products/svarka/otboynik/8.png" alt="">
+                </article>
+
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="tender container">
+        <p class="tender__text">Пригласить нас для участия в тендере можно отправив письмо на e-mail: <a
+                class="tender__link link-hover" href="mailto:for-tender@nedwals.ru">for-tender@nedwals.ru</a></p>
+        <p class="tender__text">Заказать расчет стоимости вашего проекта вы можете:<br>
+            по телефону: <a class="tender__link link-hover link-hover__static" href="tel:+73832844440">+7 (383)
+                284-44-40</a><br>
+            или по e-mail: <a class="tender__link link-hover link-hover__static" href="mailto:sales-dp2@nedwals.ru">sales-dp2@nedwals.ru</a>
+        </p>
+        <p class="tender__text">Также вы можете заполнить форму ниже и наши менеджеры сами свяжутся с вами.</p>
+    </section>
+
+    <section class="order__wrapper order__wrapper_blue">
+        <div class="order container">
+            <h2 class="section__heading section__heading_white">
+                Оформить заказ
+            </h2>
+
+            <form class="order__form" action="order.php">
+
+                <p class="order__information">Для размещения заявки свяжитесь с нами по телефону: <a
+                        class="link-hover link-hover_static"
+                        href="tel:+73832844400">+7 (383) 284 44 40</a>. Заявку можно отправить <br>на
+                    <a class="link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>, либо
+                    заполните форму для расчёта стоимости изделия.</p>
+                <textarea class="order__textarea" name="orderInformation" id="orderInformation" cols="30"
+                          rows="10" placeholder="Информация об изделии"></textarea>
+                <div class="order__form_right">
+                    <input class="order__input" type="text" placeholder="Ваше имя">
+                    <input class="order__input" type="text" placeholder="Ваш e-mail">
+                    <input class="order__input" type="tel" placeholder="Ваш телефон">
+                    <label class="order__label" for="orderAddFile">Прикрепите файл (чертёж, схема...)</label>
+                    <div class="order__addfiles">
+
+                        <button class="order__addfile" id="orderAddFile">Выберите файл <img src="img/icons/addfile.svg"
+                                                                                            alt=""></button>
+                        <button class="main-button" type="submit">Отправить заказ <img src="img/icons/screw-white.svg"
+                                                                                       alt=""></button>
+
+                    </div>
+                    <div>
+                        <input id="orderCheckbox" type="checkbox" checked>
+                        <label class="order__label" for="orderCheckbox">Согласен с <a class="label__link" href="#">условиями
+                            обработки персональных
+                            данных</a></label>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+</main>
+
+<footer class="footer__wrapper">
+    <section class="footer container">
+
+        <a href="#" class="footer__logo">
+            <img src="img/footer-logo.png" alt="">
+        </a>
+
+        <nav class="footer__nav">
+            <ul class="footer__links">
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">О компании</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Объекты</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Продукция</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Услуги</a>
+                </li>
+            </ul>
+
+            <ul class="footer__links">
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Новости</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Калькулятор</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Контакты</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="footer__contacts">
+            <a href="tel:+73832844440" class="footer__phone link-hover link-hover_static">+7 383 284-44-40</a>
+            <address>Новосибирск, Станционная 60/1, к. 2/4</address>
+            <a class="link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>
+            <div class="footer__social">
+                <a href="#">
+                    <img src="img/icons/vk.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/icons/instagram.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <p class="footer__copyright">&#169; 2022. Nedwals - Производство нестандартного высокопрочного крепежа и
+            металлокаркасных конструкций в Новосибирске.</p>
+
+    </section>
+
+
+</footer>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+    const swiperMain = new Swiper('.main-carousel', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        spaceBetween: 30
+
+    });
+
+    const swiperProjects = new Swiper('.projects__carousel', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        spaceBetween: 54,
+        width: 986,
+        slideActiveClass: 'projects__item_active'
+
+    });
+
+    const swiperEquipment = new Swiper('.equipment__carousel', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        // spaceBetween: 40,
+        slidesPerView: 7,
+        slideActiveClass: 'equipment__item_active'
+
+    });
+
+    const swiperReviews = new Swiper('.reviews__carousel', {
+        loop: true,
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // },
+        spaceBetween: 30,
+        slidesPerView: 3
+        // slideActiveClass: 'equipment__item_active'
+
+    });
+
+</script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
