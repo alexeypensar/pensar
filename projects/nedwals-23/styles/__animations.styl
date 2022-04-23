@@ -1,0 +1,53 @@
+@keyframes addfile {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25%, 75% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+
+}
+
+
+
+// links hover
+
+.link-hover {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.25s ease-in-out;
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    content: '';
+    height: 2px;
+    background-color: $color-blue;
+    transform: translateX(-101%);
+    transition: transform 0.25s ease-in-out;
+  }
+
+  &:hover, &:focus {
+    color: $color-blue;
+    transition: color 0.25s ease-in-out;
+    &::before {
+      transform: translateX(0);
+      transition: transform 0.25s ease-in-out;
+    }
+  }
+
+  &_static {
+    &::before {
+      bottom: 0;
+    }
+  }
+
+}
+
+
+
+
