@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nedwal's - производственная компания</title>
+
+    <!--цвет вкладки в chrome-->
+    <meta name="theme-color" content="#486BB1">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+
+
+</head>
+<body>
+
+<header class="header container">
+
+    <section class="header__top">
+        <a href="#" class="header__logo"><img src="img/logo.png" alt="Nedwal's"></a>
+        <a href="#" class="header__location"><img src="img/icons/location.svg" alt="отметка на карте">г. Новосибирск,
+            Станционная 60/1, корп. 2/4</a>
+
+        <form class="header__form" action="search.php">
+            <input class="header__search" type="text" placeholder="Поиск">
+        </form>
+        <a class="header__mail link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>
+        <a class="header__phone link-hover link-hover_static" href="tel:+73832844440">+7 383 284-44-40</a>
+
+        <button class="mobile-menu__button" id="mobileMenuButton"><span></span></button>
+
+    </section>
+
+    <nav class="header__nav" id="headerNav">
+        <ul class="header__list">
+            <li class="header__item_hidden">
+                <button class="mobile-menu__close" id="mobileMenuCloseButton"><span></span></button>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">О компании</a>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">Объекты</a>
+            </li>
+            <li class="header__item header__item_drop">
+                <span class="header__link header__link_arrow mobile__link_arrow">Продукция</span>
+                <ul class="header__sublist">
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Болты</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Винты</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Гайки</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Заклепки</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Пружины</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Хомуты</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__item header__item_drop">
+                <span class="header__link header__link_arrow mobile__link_arrow">Услуги</span>
+                <ul class="header__sublist">
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Накатка резьбы</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Полимерное покрытие</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Рубка металла</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Термообработка</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Токарные работы</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Цинкование</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">Новости</a>
+            </li>
+            <li class="header__item header__item_drop">
+                <span class="header__link header__link_arrow mobile__link_arrow">Калькулятор</span>
+                <ul class="header__sublist">
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Калькулятор метизов</a>
+                    </li>
+                    <li class="header__subitem">
+                        <a class="link-hover link-hover_static" href="">Калькулятор металла</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link link-hover">Контакты</a>
+            </li>
+            <li class="header__item">
+                <a href="#order" class="header__button main-button" id="headerOrderButton">Оформить заказ <img src="img/icons/screw-white.svg" alt="">
+                </a>
+            </li>
+
+            <li class="header__item_mobile">
+
+                <a href="#" class="header__location"><img src="img/icons/location-white.svg" alt="отметка на карте">г.
+                    Новосибирск,
+                    Станционная 60/1, корп. 2/4</a>
+            </li>
+            <li class="header__item_mobile">
+                <form class="header__form" action="search.php">
+                    <input class="header__search" type="text" placeholder="Поиск">
+                </form>
+            </li>
+
+            <li class="header__item_mobile">
+                <a class="header__mail link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>
+            </li>
+
+            <li class="header__item_mobile">
+                <a class="header__phone link-hover link-hover_static" href="tel:+73832844440">+7 383 284-44-40</a>
+            </li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<main>
+
+    <div class="container">
+        <section class="main-carousel swiper">
+            <div class="swiper-wrapper">
+                <article class="main-carousel__banner swiper-slide">
+                    <div class="main-carousel__image">
+                        <img src="img/main-carousel/1.jpg" class="" alt="">
+                    </div>
+
+                    <h2 class="main-carousel__heading">
+                        Изготовление металлоконструкций для объектов строительства
+                    </h2>
+                    <p class="main-carousel__description">Комплектуем жилые и административные здания: балками, опорами,
+                        фермами, лестницами, входными группами, ограждениями лестничных маршей, балконов, подъездов и
+                        т.д.
+                    </p>
+
+                    <button class="main-button main-button_transparent">Наши услуги <img src="img/icons/screw-white.svg"
+                                                                                         alt=""></button>
+                </article>
+
+                <article class="main-carousel__banner swiper-slide">
+                    <div class="main-carousel__image">
+                        <img src="img/main-carousel/2.jpg" class="" alt="">
+                    </div>
+                    <h2 class="main-carousel__heading">
+                        Комплексная механическая обработка металла
+                    </h2>
+                    <p class="main-carousel__description">Производство под ваши нужды - серийный выпуск необходимых вам
+                        деталей по вашим, нашим или совместно разработанным чертежам. Накатка резьбы, рубка, сверление и
+                        прочие работы.
+                    </p>
+
+                    <button class="main-button main-button_transparent">Наши услуги <img src="img/icons/screw-white.svg"
+                                                                                         alt=""></button>
+                </article>
+                <article class="main-carousel__banner swiper-slide">
+                    <div class="main-carousel__image">
+                        <img src="img/main-carousel/3.jpg" class="" alt="">
+                    </div>
+                    <h2 class="main-carousel__heading">
+                        Термообработка
+                    </h2>
+                    <p class="main-carousel__description">Завод Nedwal's предлагает качественную термообработку: отжиг,
+                        нормализация, отпуск, закалка металлов.
+                    </p>
+
+                    <button class="main-button main-button_transparent">Наши услуги <img src="img/icons/screw-white.svg"
+                                                                                         alt=""></button>
+                </article>
+
+                <article class="main-carousel__banner swiper-slide">
+                    <div class="main-carousel__image">
+                        <img src="img/main-carousel/4.jpg" class="" alt="">
+                    </div>
+                    <h2 class="main-carousel__heading">
+                        Быстровозводимые здания
+                    </h2>
+                    <p class="main-carousel__description">
+                        Производим и строим здания из металлоконструкций и сэндвич-панелей:
+                        ангары и склады, автомойки и боксы для СТО, сельскохозяйственные постройки, магазины, павильоны
+                        и многое другое.
+                    </p>
+
+                    <button class="main-button main-button_transparent">Наши услуги <img src="img/icons/screw-white.svg"
+                                                                                         alt=""></button>
+                </article>
+
+            </div>
+
+        </section>
+    </div>
+
+    <section class="facilities container">
+
+        <h2 class="section__heading">Наши возможности</h2>
+
+
+        <div class="facilities__list">
+            <article class="facilities__item">
+
+                <div class="facilities__image">
+                    <img src="img/facilities/subpodryad.jpg" alt="Субподрядные работы">
+                </div>
+
+                <p class="facilities__description"><strong>Продукция:</strong> лестницы, французские балкончики,
+                    ограждения
+                    заборов, лестничные ограждения, входные группы и прочее.<br><br>
+                    Компания Nedwals готова выполнить <strong>любой объем</strong> субподрядных работ, включая монтаж,
+                    установку пандусов или любых других металлоконструкций.<br><br>
+                    <strong>Сотрудничаем</strong> со строительными организациями, проектными институтами (составление
+                    смет и
+                    т.д.), генеральными подрядчиками и застройщиками.
+                </p>
+
+                <a href="#" class="main-button main-button_white">Подробнее<img src="img/icons/screw-white.svg" alt=""></a>
+
+                <h3 class="facilities__heading">Субподрядные работы</h3>
+            </article>
+
+            <article class="facilities__item facilities__item_small">
+
+                <div class="facilities__image">
+                    <img src="img/facilities/mechanic.jpg" alt="Цех механической металлообработки">
+                </div>
+
+
+                <p class="facilities__description">Высокоточная токарная обработка на ЧПУ станках<br>
+                    токарные работы<br>
+                    слесарные работы<br>
+                    накатка резьбы<br>
+                    рубка металла<br>
+                    сверление отверстий в металле
+                </p>
+
+                <a href="#" class="main-button main-button_white">Подробнее<img src="img/icons/screw-white.svg" alt=""></a>
+
+                <h3 class="facilities__heading">Цех механической металлообработки</h3>
+
+            </article>
+
+            <article class="facilities__item facilities__item_small">
+
+                <div class="facilities__image">
+                    <img src="img/facilities/polymer.jpg" alt="Полимерный цех">
+                </div>
+
+                <p class="facilities__description">
+                    Завод <strong>Nedwal's</strong> оказывает услуги полимерного покрытия.<br><br>
+                    Покраска полимером, полиэстером.<br><br>
+                    Покраска изделий в <strong>любой цвет RAL</strong>.
+                </p>
+
+                <a href="#" class="main-button main-button_white">Подробнее<img src="img/icons/screw-white.svg" alt=""></a>
+
+                <h3 class="facilities__heading">Полимерный цех</h3>
+            </article>
+
+            <article class="facilities__item facilities__item_small">
+
+                <div class="facilities__image">
+                    <img src="img/facilities/termo.jpg" alt="Цех термообработки">
+                </div>
+
+                <p class="facilities__description">
+                    В настоящее время на заводе <strong>Nedwal's</strong> используются следующие виды термических
+                    обработок стали:<br><br>
+                    Отжиг<br>
+                    Нормализация<br>
+                    Отпуск<br>
+                    Закалка<br>
+                </p>
+
+                <a href="#" class="main-button main-button_white">Подробнее<img src="img/icons/screw-white.svg" alt=""></a>
+
+
+                <h3 class="facilities__heading">Цех термообработки</h3>
+            </article>
+
+            <article class="facilities__item facilities__item_small">
+
+                <div class="facilities__image">
+                    <img src="img/facilities/galvanic.jpg" alt="Гальванический цех">
+                </div>
+
+
+                <p class="facilities__description">
+                    <strong>Компания Nedwal's</strong> предоставляет услуги по гальваническому цинкованию.<br>
+                    <strong>Холодное гальваническое
+                        цинкование</strong> позволяет в дальнейшем вести сварку изделий, что удобно при монтаже сложных
+                    конструкций.
+                </p>
+
+                <a href="#" class="main-button main-button_white">Подробнее<img src="img/icons/screw-white.svg" alt=""></a>
+
+
+                <h3 class="facilities__heading">Гальванический цех</h3>
+            </article>
+
+            <article class="facilities__item facilities__item_small">
+
+                <div class="facilities__image">
+                    <img src="img/facilities/svarka.jpg" alt="Сварочный цех">
+                </div>
+
+                <p class="facilities__description">
+                    Предлагаем вам:<br>парковочные столбики<br>колёсоотбойники<br>защитные отбойники.<br><br>
+                    Все характеристики могут быть изменены по желанию заказчика.
+                </p>
+
+                <a href="#" class="main-button main-button_white">Подробнее<img src="img/icons/screw-white.svg" alt=""></a>
+
+                <h3 class="facilities__heading">Сварочный цех</h3>
+            </article>
+
+            <article class="facilities__item">
+
+                <div class="facilities__image">
+                    <img src="img/facilities/buildings.jpg" alt="Быстровозводимые здания">
+                </div>
+
+                <p class="facilities__description">
+                    Проектируем и строим здания из металлоконструкций и сэндвич-панелей:<br><br>
+                    Ангары и склады,
+                    автомойки и боксы для СТО,
+                    сельскохозяйственные постройки, магазины и торговые павильоны, пристрои, мансардные этажи, офисные и
+                    административные здания, кафе и рестораны.
+
+                </p>
+
+                <a href="#" class="main-button main-button_white">Подробнее<img src="img/icons/screw-white.svg" alt=""></a>
+
+
+                <h3 class="facilities__heading">Быстровозводимые здания</h3>
+            </article>
+        </div>
+
+    </section>
+
+
+    <div class="about__wrapper">
+        <section class="about container">
+
+
+            <div class="about__info">
+                <h2 class="about__heading"><strong>Компания «Недвальс»</strong> начала свою деятельность ещё в 2000 году
+                    с производства
+                    крепежа.
+                </h2>
+
+                <p class="about__text">
+                    В арсенале компании находится пять высокооборудованных цехов: цех механической металлообработки,
+                    сварочный, гальванический, полимерный и цех термообработки, которые прекрасно взаимодействуют друг с
+                    другом и дают отличный результат. Основные преимущества компании - высокое качество и оперативность
+                    выполнения заказа, от 8 часов!
+                </p>
+            </div>
+
+            <div class="about__links">
+                <img src="img/about-logo.png" alt="">
+
+                <a class="about__link" href="#">Подробнее о компании <img src="img/icons/arrow-link.svg" alt=""></a>
+            </div>
+        </section>
+    </div>
+
+    <section class="projects container">
+        <!--        <div class="container">-->
+        <h2 class="section__heading">
+            Проекты, которыми мы гордимся
+        </h2>
+        <!--        </div>-->
+
+
+        <div class="swiper projects__carousel">
+
+            <div class="swiper-wrapper">
+
+                <article class="swiper-slide projects__item">
+                    <img class="projects__image" src="img/projects/sloboda.jpg" alt="Жилой массив Чистая Слобода">
+                    <div class="projects__info">
+                        <h2 class="projects__heading">Жилой массив "Чистая Слобода" (КПД-Газстрой)</h2>
+
+                        <p class="projects__text">
+                            Выполненные работы на объекте:<br><br>
+
+                            Ограждения территрий<br>
+                            Входные группы<br>
+                            Пожарные лестницы<br>
+                            Металлические лестницы (приставные)<br>
+                            Сварные ограждения
+                        </p>
+
+                        <a class="about__link" href="#">Подробнее <img src="img/icons/arrow-link.svg" alt=""></a>
+
+                    </div>
+                </article>
+
+                <article class="swiper-slide projects__item">
+                    <img class="projects__image" src="img/projects/2.jpg" alt="Жилой массив Чистая Слобода">
+                    <div class="projects__info">
+                        <h2 class="projects__heading">Жилой массив "Чистая Слобода" (КПД-Газстрой)</h2>
+
+                        <p class="projects__text">
+                            Выполненные работы на объекте:<br><br>
+
+                            Ограждения территрий<br>
+                            Входные группы<br>
+                            Пожарные лестницы<br>
+                            Металлические лестницы (приставные)<br>
+                            Сварные ограждения
+                        </p>
+
+                        <a class="about__link" href="#">Подробнее <img src="img/icons/arrow-link.svg" alt=""></a>
+
+                    </div>
+                </article>
+
+                <article class="swiper-slide projects__item">
+                    <img class="projects__image" src="img/projects/3.jpg" alt="Жилой массив Чистая Слобода">
+                    <div class="projects__info">
+                        <h2 class="projects__heading">Жилой массив "Чистая Слобода" (КПД-Газстрой)</h2>
+
+                        <p class="projects__text">
+                            Выполненные работы на объекте:<br><br>
+
+                            Ограждения территрий<br>
+                            Входные группы<br>
+                            Пожарные лестницы<br>
+                            Металлические лестницы (приставные)<br>
+                            Сварные ограждения
+                        </p>
+
+                        <a class="about__link" href="#">Подробнее <img src="img/icons/arrow-link.svg" alt=""></a>
+
+                    </div>
+                </article>
+
+
+            </div>
+
+        </div>
+
+
+        <!--        <div class="container">-->
+        <a href="#" class="main-button main-button_blue">Больше проектов <img src="img/icons/screw-blue.svg" alt=""></a>
+        <!--        </div>-->
+
+
+    </section>
+
+    <div class="equipment__wrapper">
+        <section class="equipment container">
+
+            <h2 class="section__heading">Наше оборудование</h2>
+
+            <div class="swiper equipment__carousel">
+                <div class="swiper-wrapper">
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/stanok-sverlilnyi.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Сверлильные станки</h3>
+                            <p class="equipment__description">Сверлильных станков у компании Nedwals 7 шт. Предназначены
+                                для изготовления отверстий в нестандартных изделиях.</p>
+                        </div>
+                    </article>
+
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/shestishpindelnyj-stanok.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Шестишпиндельный станок</h3>
+                            <p class="equipment__description">Шестишпиндельный станок позволяет производить
+                                индивидуальные изделия в короткие сроки. Шестишпиндельные станки 4 шт.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/gibochnyj-press-s-chpu.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Пресс по металлу:
+                            </h3>
+                            <p class="equipment__description">Гидравлические пресса применяется в различных отраслях
+                                машиностроения и строительстве объектов, а так же различных замкнутых и незамкнутых
+                                профилей, ящиков, коробов а также цилиндров и конусов. В составе компании пресс 100т = 1
+                                шт.
+                                и пресс 50т = 1 шт.
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/frezernyj-stanok.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Фрезерный станок:
+                            </h3>
+                            <p class="equipment__description">Современные обрабатывающие центры позволяют проводить
+                                комплексную обработку сложных деталей с разных сторон без их перебазирования
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/holodnovysadochnyj-avtomat.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Холодновысадочный станок:
+                            </h3>
+                            <p class="equipment__description">Предназначен для изготовления методом холодной высадки
+                                заготовок самонарезающих винтов.
+
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/kombinirovannye-nozhnicy.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Комбинированные ножницы:
+                            </h3>
+                            <p class="equipment__description">Комбинированные ножницы по металлу предназначены для
+                                прямых и
+                                криволинейных резов тонколистового металла.
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/rezbonakatnoj-stanok.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Резьбонакатной станок:
+                            </h3>
+                            <p class="equipment__description">Резьбонакатной станок используется для нарезания резьбы на
+                                металлические изделия. Резьбонакатных 2 шт.
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/tokarnye-stanki.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Токарный станок:
+                            </h3>
+                            <p class="equipment__description">Токарный станок предназначен для поточного изготовления
+                                метизов (гайки, болты) и других деталей в больших объемах диаметром до 40мм. Токарных
+                                станков 4 шт.
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/tokarno-vintoreznyi-stanok_21062.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Токарный одношпиндельный станок:
+                            </h3>
+                            <p class="equipment__description">Одношпиндельные токарные автоматы применяются для
+                                производства
+                                индивидуальных заказов и предназначены для обработки деталей типа тел вращения с
+                                диаметром
+                                до 40 мм и длиной не более 100 мм. Токарных одношпиндельных станков 3 шт.
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/valcy-dlya-listovogo-metalla.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Вальцы для листового металла:
+                            </h3>
+                            <p class="equipment__description">Вальцы электромеханические, предназначены для гибки
+                                листового
+                                металла за счет использования в качестве главного движения - электропривод.
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/gilotina-po-metallu.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Гильотина по металлу:
+                            </h3>
+                            <p class="equipment__description">Гильотины компании Nedwals обрабатывают металл до 22 мм.
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/pechi-termoobrabotka.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Термообработка, закалка, отжиг:
+                            </h3>
+                            <p class="equipment__description">Компания Nedwals предоставляет услуги по термообработке,
+                                закалке и отжигу стали в термической печи.
+
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide equipment__item">
+                        <div class="equipment__image">
+                            <img src="img/equipment/unimig350.jpg" alt="">
+                        </div>
+                        <div class="equipment__text">
+                            <h3 class="equipment__heading">Сварочный полуавтомат:
+                            </h3>
+                            <p class="equipment__description">Полупрофессиональный однофазный сварочный полуавтомат для
+                                сварки с/без защитного газа.
+                                Оснащен микропроцессорным управлением.
+                                Режим точечной сварки по таймеру. Сварочных полуавтоматов 10 шт.
+
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+
+    <section class="products container">
+        <h2 class="section__heading">Производство крепежа</h2>
+
+        <div class="products__items">
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej1.png" alt="">
+                <h3 class="products__name">Производство <br>по чертежам заказчика</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej2.png" alt="">
+                <h3 class="products__name">Болты</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej3.png" alt="">
+                <h3 class="products__name">Винты</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej4.png" alt="">
+                <h3 class="products__name">Ванночки для сварки арматуры</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej5.png" alt="">
+                <h3 class="products__name">Гайки</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej6.png" alt="">
+                <h3 class="products__name">Заклёпки</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej7.png" alt="">
+                <h3 class="products__name">Пружины</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej8.png" alt="">
+                <h3 class="products__name">Хомуты</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej9.png" alt="">
+                <h3 class="products__name">Шайбы</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/krepej10.png" alt="">
+                <h3 class="products__name">Шпильки</h3>
+            </a>
+
+        </div>
+
+        <h2 class="section__heading">Изделия для строительных объектов</h2>
+
+        <div class="products__items">
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/stroit1.png" alt="">
+                <h3 class="products__name">Фундаментные болты</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/stroit2.png" alt="">
+                <h3 class="products__name">Анкерные группы</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/stroit3.png" alt="">
+                <h3 class="products__name">Закладные детали</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/stroit4.png" alt="">
+                <h3 class="products__name">Колесоотбойники</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/stroit5.png" alt="">
+                <h3 class="products__name">Лестницы</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/stroit6.png" alt="">
+                <h3 class="products__name">Металлоконструкции</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/stroit7.png" alt="">
+                <h3 class="products__name">Ограждения и заборы</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/stroit8.png" alt="">
+                <h3 class="products__name">Пандусы</h3>
+            </a>
+
+            <a href="#" class="products__item">
+                <img class="products__image" src="img/products/stroit9.png" alt="">
+                <h3 class="products__name">Урны</h3>
+            </a>
+
+            <a href="#" class="products__item products__item_blue">
+                <span>Перейти в каталог</span>
+                <img src="img/icons/screw-white.svg" alt="">
+            </a>
+
+        </div>
+    </section>
+
+    <section class="reviews__wrapper">
+
+        <div class="reviews container">
+
+            <h2 class="section__heading section__heading_white">Отзывы наших клиентов</h2>
+
+            <div class="swiper reviews__carousel">
+
+                <div class="reviews__items swiper-wrapper">
+
+                    <article class="reviews__item swiper-slide">
+                        <img src="img/reviews/1.jpg" alt="">
+                    </article>
+                    <article class="reviews__item swiper-slide">
+                        <img src="img/reviews/2.jpg" alt="">
+                    </article>
+                    <article class="reviews__item swiper-slide">
+                        <img src="img/reviews/1.jpg" alt="">
+                    </article>
+
+                    <article class="reviews__item swiper-slide">
+                        <img src="img/reviews/2.jpg" alt="">
+                    </article>
+
+                    <article class="reviews__item swiper-slide">
+                        <img src="img/reviews/1.jpg" alt="">
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="blog container">
+
+        <h2 class="section__heading">Блог</h2>
+
+        <div class="blog__items">
+            <div class="blog__items_left">
+
+                <a href="#" class="news news_big">
+                    <img class="news__image" src="img/blog/big.jpg" alt="">
+                    <h3 class="news__heading news__heading_big">Освоен выпуск новой продукции</h3>
+                    <p class="news__text">Анкерный болт двухраспорный высокопрочный — завод «Nedwal's»</p>
+                    <p class="news__date">1 января в 15:58</p>
+                </a>
+
+
+            </div>
+
+            <div class="blog__items_right">
+
+                <a href="#" class="news news_small">
+                    <img class="news__image" src="img/blog/1.jpg" alt="">
+                    <h3 class="news__heading">Анкерный болт двухраспорный высокопрочный — завод «Nedwal's»</h3>
+                    <p class="news__date">1 января в 15:58</p>
+                </a>
+
+                <a href="#" class="news news_small">
+                    <img class="news__image" src="img/blog/2.jpg" alt="">
+                    <h3 class="news__heading">Анкерный болт двухраспорный высокопрочный — завод «Nedwal's»</h3>
+                    <p class="news__date">1 января в 15:58</p>
+                </a>
+
+                <a href="#" class="news news_small">
+                    <img class="news__image" src="img/blog/3.jpg" alt="">
+                    <h3 class="news__heading">Анкерный болт двухраспорный высокопрочный — завод «Nedwal's»</h3>
+                    <p class="news__date">1 января в 15:58</p>
+                </a>
+
+                <a href="#" class="news news_small">
+                    <img class="news__image" src="img/blog/4.jpg" alt="">
+                    <h3 class="news__heading">Анкерный болт двухраспорный высокопрочный — завод «Nedwal's»</h3>
+                    <p class="news__date">1 января в 15:58</p>
+                </a>
+
+
+            </div>
+
+            <a href="#" class="blog__button main-button main-button_transparent">Все новости
+                <img src="img/icons/screw-blue.svg" alt="">
+            </a>
+        </div>
+
+    </section>
+
+    <section class="order__wrapper" id="order">
+        <div class="order container">
+            <h2 class="section__heading section__heading_white">
+                Оформить заказ
+            </h2>
+
+            <form class="order__form" action="order.php">
+
+                <p class="order__information">Для размещения заявки свяжитесь с нами по телефону: <a
+                        class="link-hover link-hover_static"
+                        href="tel:+73832844400">+7 (383) 284 44 40</a>. Заявку можно отправить <br>на
+                    <a class="link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>, либо
+                    заполните форму для расчёта стоимости изделия.</p>
+                <textarea class="order__textarea" name="orderInformation" id="orderInformation" cols="30"
+                          rows="10" placeholder="Информация об изделии"></textarea>
+                <div class="order__form_right">
+                    <input class="order__input" type="text" placeholder="Ваше имя">
+                    <input class="order__input" type="text" placeholder="Ваш e-mail">
+                    <input class="order__input" type="tel" placeholder="Ваш телефон">
+                    <label class="order__label" for="orderAddFile">Прикрепите файл (чертёж, схема...)</label>
+                    <div class="order__addfiles">
+
+                        <button class="order__addfile" id="orderAddFile" type="button">Выберите файл <img
+                                src="img/icons/addfile.svg"
+                                alt="">
+                        </button>
+                        <button class="main-button" type="submit">Отправить заказ <img src="img/icons/screw-white.svg"
+                                                                                       alt=""></button>
+
+                    </div>
+                    <div>
+                        <input id="orderCheckbox" type="checkbox" checked>
+                        <label class="order__label" for="orderCheckbox">Согласен с <a class="label__link" href="#">условиями
+                            обработки персональных
+                            данных</a></label>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0d9f0059adbc32f998893f7ab007dea1315e9675edc45c3a5e8f3d469f1cf265&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;scroll=false"></script>
+
+
+</main>
+
+<footer class="footer__wrapper">
+    <section class="footer container">
+
+        <a href="#" class="footer__logo">
+            <img src="img/footer-logo.png" alt="">
+        </a>
+
+        <nav class="footer__nav">
+            <ul class="footer__links">
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">О компании</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Объекты</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Продукция</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Услуги</a>
+                </li>
+            </ul>
+
+            <ul class="footer__links">
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Новости</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Калькулятор</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__link link-hover link-hover_static">Контакты</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="footer__contacts">
+            <a href="tel:+73832844440" class="footer__phone link-hover link-hover_static">+7 383 284-44-40</a>
+            <a class="footer__email link-hover link-hover_static" href="mailto:info@nedwals.ru">info@nedwals.ru</a>
+            <address>Новосибирск, Станционная 60/1, к. 2/4</address>
+
+            <div class="footer__social">
+                <a href="#">
+                    <img src="img/icons/vk.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/icons/instagram.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <p class="footer__copyright">&#169; 2022. Nedwals - Производство нестандартного высокопрочного крепежа и
+            металлокаркасных конструкций в Новосибирске.</p>
+
+    </section>
+
+
+</footer>
+
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/carousels.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
